@@ -1,0 +1,17 @@
+<div class="coconutSVG">
+  <img src="../assets/coconut.svg" alt="" width="328" height="399" />
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .coconutSVG {
+    position: fixed;
+    left: 0;
+    top: 6rem;
+    pointer-events: none;
+    display: none;
+    @include bp(1024) {
+      display: block;
+    }
+  }
+</style>

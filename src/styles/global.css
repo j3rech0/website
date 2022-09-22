@@ -1,0 +1,93 @@
+:root {
+  --f-rubik: "Rubik Glitch", cursive;
+  --f-roboto: "Roboto", sans-serif;
+  --c-black: #040404;
+  --c-blue: #46b4ff;
+  --c-gray: #8d8d8d;
+  --c-gray-100: #dbdbdb;
+  --c-gray-200: #494949;
+  --c-white: #fff;
+
+  --c-bg-gradient-1: #101014;
+  --c-bg-gradient-2: #060606;
+  --c-bg-gradient-3: #0c0e11;
+
+  --t-fg: var(--c-black);
+  --t-bg: var(--c-white);
+  --t-active: var(--c-blue);
+
+  --h-full: 100vh;
+
+  --p-tiny: 0.7rem;
+  --p-medium: 2rem;
+  --m-medium: 2rem;
+  --m-large: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  color: var(--c-gray-100);
+  font-family: "Abel", sans-serif;
+  background: radial-gradient(
+    128.09% 128.09% at 50% 20.88%,
+    #111111 0%,
+    #000000 100%
+  );
+
+  height: calc(var(--h-full) - var(--p-medium) * 2);
+  padding: var(--p-medium);
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--c-black);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--c-gray-100);
+  border-radius: 20px;
+  border: 3px solid var(--c-black);
+}
+@media (min-width: 768px) {
+  body {
+    padding: calc(var(--p-medium));
+  }
+}
+* {
+  box-sizing: content-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--c-white);
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  font-size: var(--f-u8);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

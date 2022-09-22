@@ -1,0 +1,75 @@
+---
+import Intro from "../components/Intro.astro";
+import List from "../components/List.astro";
+import Coconut from "../components/Coconut.astro";
+---
+
+<div class="top-fold">
+  <Coconut />
+  <Intro />
+  <List />
+  <div class="fakeCursor" style="--opacity; --top; --left">
+    <img src="../assets/fake_cursor.svg" alt="" width="16" height="21" />
+  </div>
+</div>
+
+<script defer>
+  const target = document.querySelector(".main-container");
+  const fakeCursor = document.querySelector(".fakeCursor");
+  const placeCursor = (x, y) => {
+    fakeCursor.style.setProperty("--top", y + "px");
+    fakeCursor.style.setProperty("--left", x + "px");
+  };
+
+  target?.addEventListener("mousemove", (event) => {
+    let opaque = event.clientY / 200 - 1.5;
+    let top = event.clientY / 1.76;
+    fakeCursor.style.setProperty("--opacity", opaque);
+    placeCursor(top, event.clientX);
+  });
+
+  target?.addEventListener("mouseleave", () => {
+    fakeCursor.style.setProperty("--opacity", 0);
+  });
+</script>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .fakeCursor {
+    opacity: var(--opacity, 0);
+    position: absolute;
+    left: var(--top, 0);
+    bottom: var(--left, 0);
+    filter: blur(2px);
+    pointer-events: none;
+    transition: opacity 100ms;
+    display: none;
+    @include bp(1024) {
+      display: block;
+    }
+    > img {
+      opacity: 0.2;
+      transform: translateX(-1px);
+    }
+  }
+  .top-fold {
+    cursor: default;
+    @include bp(500) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(377px, 1fr));
+      grid-gap: 1rem;
+      place-content: center;
+      margin-inline: auto;
+      max-width: 80vw;
+      align-items: flex-end;
+    }
+    @include bp(1024) {
+      padding-bottom: rem(20);
+    }
+    @include bp(1200) {
+      grid-gap: 2rem;
+      max-width: rem(992);
+      padding-top: rem(100);
+    }
+  }
+</style>

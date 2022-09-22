@@ -1,0 +1,39 @@
+---
+import Footer from "../components/Footer.astro";
+import MetaHead from "../components/MetaHead.astro";
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <MetaHead
+      title="Jech | Web Developer and designer"
+      description="My name is Jech and I'm a Freelance Web Developer and designer from the Philippines"
+    />
+    <style lang="scss">
+      @import "../styles/mixin.scss";
+      .container-grid {
+        display: grid;
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 6vh 60vh calc(32vh - var(--p-medium));
+        @include bp(960) {
+          grid-template-rows: 6vh 50vh calc(43vh - var(--p-medium));
+        }
+        @include bp(1440) {
+          grid-template-rows: 6vh 52vh calc(40vh - var(--p-medium));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-grid">
+      <Header />
+      <slot />
+      <Footer />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<div>
+  <a href="https://dribbble.com/devui2022" title="devui2022" target="_blank">
+    <img src="./assets/dribbble.svg" width="22" alt="" />
+  </a>
+  <a href="https://www.youtube.com/channel/UCZnuUnd4XeKxfuTPFFs9OBA" title="devUI youtube channel" target="_blank">
+    <img src="./assets/youtube.svg" width="25" alt="" />
+  </a>
+  <a href="https://codepen.io/co0kie" title="devUI codepen" target="_blank">
+    <img src="./assets/codepen.svg" width="22" alt="" />
+  </a>
+</div>
+<style lang="scss">
+  div {
+    margin-top: auto;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    > a {
+      display: block;
+      opacity: 0.2;
+      transition: 200ms;
+      > img {
+        display: block;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+    > * + * {
+      margin-left: 2.5rem;
+    }
+  }
+</style>

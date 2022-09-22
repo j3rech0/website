@@ -1,0 +1,57 @@
+<nav class="navigation">
+  <a class="link" href="/" title="Hi">
+    <div class="logo">
+      <svg
+        width="29"
+        height="44"
+        viewBox="0 0 29 44"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M22 5.18868C22 5.25818 21.9986 5.32737 21.9959 5.39621H22V38.8113V39.0188H21.9959C21.887 41.7883 19.6074 44 16.8113 44C14.0152 44 11.7356 41.7883 11.6267 39.0188H11.6226V38.8113V5.39621H11.6267C11.624 5.32737 11.6226 5.25818 11.6226 5.18868C11.6226 2.32305 13.9457 0 16.8113 0C19.6769 0 22 2.32305 22 5.18868ZM27.1218 6.50086C26.1487 5.5278 24.8289 4.98114 23.4528 4.98114V10.1698L23.4528 15.3585C24.8289 15.3585 26.1487 14.8118 27.1218 13.8388C28.0948 12.8657 28.6415 11.5459 28.6415 10.1698C28.6415 8.79369 28.0948 7.47393 27.1218 6.50086ZM10.3733 26.9811C10.376 26.9123 10.3774 26.8431 10.3774 26.7736C10.3774 23.908 8.05431 21.5849 5.18868 21.5849C2.32305 21.5849 0 23.908 0 26.7736C0 26.8431 0.00136664 26.9123 0.00407452 26.9811H0V33.2076H0.0369727C0.0125602 33.4117 0 33.6195 0 33.8302C0 36.6958 2.32305 39.0189 5.18868 39.0189C8.05431 39.0189 10.3774 36.6958 10.3774 33.8302C10.3774 33.6195 10.3648 33.4117 10.3404 33.2076H10.3774V26.9811H10.3733Z"
+          fill="url(#paint0_linear_814_7)"></path>
+        <defs>
+          <linearGradient
+            id="paint0_linear_814_7"
+            x1="24.3453"
+            y1="-0.954717"
+            x2="1.43207"
+            y2="43.917"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="white"></stop>
+            <stop offset="1" stop-color="white"></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </a>
+  <a href="mailto:subs373n@gmail.com?subject=Hi">Contact</a>
+</nav>
+
+<style lang="scss">
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navigation > a:not(:first-child) {
+    color: rgba(0, 0, 0, 0);
+    background: var(--c-gray);
+    -webkit-background-clip: text;
+    background-image: radial-gradient(var(--c-gray), var(--c-gray));
+    background-size: 40px 87px;
+    background-repeat: no-repeat;
+    background-position: -340% center;
+    transition: 300ms ease-in-out;
+    font-size: 1rem;
+    &:hover {
+      background-image: radial-gradient(white, rgba(black, 40%));
+      background-position: 510% center;
+      color: var(--c-gray);
+    }
+  }
+</style>

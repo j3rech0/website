@@ -1,0 +1,39 @@
+---
+import SocialMedia from "./SocialMedia.astro";
+---
+
+<footer class="footer">
+  <SocialMedia />
+</footer>
+<!-- To do's -->
+<!-- Add work experiences -->
+<!-- Add animation -->
+<!-- Add UI framework? -->
+<!-- https://www.youtube.com/watch?v=T33NN_pPeNI -->
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .footer {
+    display: flex;
+    justify-content: center;
+    @include bp(768) {
+      justify-content: flex-start;
+    }
+    @include bp(1024) {
+      width: 100%;
+      background: linear-gradient(180deg, rgb(0 0 0), transparent);
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding-inline: 2rem;
+    }
+    > div {
+      margin-top: auto;
+      margin-bottom: 1rem;
+    }
+    a {
+      color: var(--c-gray);
+      &:hover {
+        color: var(--c-white);
+      }
+    }
+  }
+</style>

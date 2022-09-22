@@ -1,0 +1,119 @@
+---
+import * as splash from "../pages/home/intro.md";
+---
+
+<div class="splash-container">
+  <div class="card-splash">
+    <h1 data-copy={splash.frontmatter.title + " " + splash.frontmatter.name}>
+      {splash.frontmatter.title}
+      <span>{splash.frontmatter.name}</span>
+    </h1>
+    <h5 data-copy-sub={splash.frontmatter.slogan}>
+      {splash.frontmatter.slogan}
+    </h5>
+  </div>
+  <svg class="water">
+    <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+      <feTurbulence
+        id="sea-filter"
+        numOctaves="3"
+        seed="1"
+        baseFrequency="0.02 0.05"></feTurbulence>
+      <feDisplacementMap scale="15" in="SourceGraphic"></feDisplacementMap>
+      <animate
+        xlink:href="#sea-filter"
+        attributeName="baseFrequency"
+        dur="60s"
+        keyTimes="0;0.5;1"
+        values="0.02 0.06;0.04 0.08;0.02 0.06"
+        repeatCount="indefinite"></animate>
+    </filter>
+  </svg>
+  <div class="water"></div>
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .water {
+    display: none;
+  }
+  .splash-container {
+    margin-bottom: var(--m-medium);
+    @include bp(1440) {
+      margin-bottom: var(--m-large);
+    }
+  }
+  .card-splash {
+    cursor: default;
+    > h5 {
+      color: var(--c-gray-200);
+    }
+    > h1 {
+      font-size: 8vw;
+      font-weight: 100;
+      color: var(--c-gray);
+      font-family: var(--f-roboto);
+      > span {
+        color: var(--c-white);
+      }
+      @include bp(768) {
+        font-size: 4vw;
+      }
+      @include bp(1224) {
+        font-size: rem(53);
+      }
+    }
+    @include bp(1024) {
+      [data-copy-sub],
+      [data-copy] {
+        position: relative;
+        &::before {
+          pointer-events: none;
+          position: absolute;
+          transform: rotateX(222deg) translateX(-18px);
+        }
+      }
+      [data-copy] {
+        &::before {
+          content: attr(data-copy);
+          filter: blur(2px) url("#turbulence");
+          opacity: 0.5;
+          bottom: rem(-190);
+          padding-inline: 1rem;
+          white-space: nowrap;
+          @include bp(1024) {
+            bottom: rem(-222);
+          }
+          @include bp(1224) {
+            bottom: rem(-240);
+          }
+          @include bp(1440) {
+            bottom: rem(-294.4);
+          }
+        }
+      }
+      [data-copy-sub] {
+        &::before {
+          content: attr(data-copy-sub);
+          filter: blur(1px) url("#turbulence");
+          opacity: 0.4;
+          bottom: rem(-103);
+          transform: rotateX(170deg) translateX(-11px);
+          white-space: nowrap;
+          padding-inline: 0.5rem;
+          @include bp(1024) {
+            bottom: rem(-144);
+          }
+          @include bp(1440) {
+            bottom: rem(-192);
+          }
+        }
+      }
+    }
+  }
+  .card-splash > h5 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 100;
+  }
+</style>

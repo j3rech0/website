@@ -1,0 +1,58 @@
+---
+import * as title from "../pages/home/work.md";
+import List from "../pages/home/work.md";
+---
+
+<div class="card-list">
+  <p>{title.frontmatter.heading}</p>
+  <List />
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .card-list {
+    p {
+      font-size: rem(17);
+      margin-bottom: rem(20);
+      @include bp(500) {
+        margin-left: rem(183);
+      }
+    }
+  }
+</style>
+
+<style is:global lang="scss">
+  @import "../styles/mixin.scss";
+  .card-list {
+    position: relative;
+    @include bp(1024) {
+      margin-left: auto;
+    }
+    > ul {
+      li {
+        font-size: rem(15);
+        display: flex;
+
+        + li {
+          margin-top: rem(15);
+        }
+      }
+      strong {
+        width: rem(75);
+        font-weight: 100;
+        text-align: right;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        @include bp(500) {
+          width: rem(160);
+        }
+      }
+      em {
+        font-style: normal;
+        color: var(--c-gray-200);
+        margin-left: rem(20);
+      }
+    }
+  }
+</style>
