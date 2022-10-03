@@ -1,0 +1,24 @@
+---
+import TopFold from "./TopFold.astro";
+---
+
+<main class="main-container">
+  <TopFold />
+</main>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .main-container {
+    margin-inline: auto;
+    margin-top: auto;
+    @include bp(1024) {
+      margin-right: -2rem;
+      margin-left: -2rem;
+      background: url("../assets/mountains.svg") no-repeat left bottom;
+      background-size: 50%;
+    }
+    @include bp(1440) {
+      background-size: rem(888);
+    }
+  }
+</style>

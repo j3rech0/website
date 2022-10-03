@@ -1,11 +1,34 @@
 ---
 import * as title from "../pages/home/work.md";
-import List from "../pages/home/work.md";
+import Work from "../pages/home/work.md";
+import Link from "./Link.astro";
+const ctaArrow = `<svg
+        width="18"
+        height="16"
+        viewBox="0 0 18 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 8H17M10 1L17 8L10 15"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>`;
 ---
 
 <div class="card-list">
   <p>{title.frontmatter.heading}</p>
-  <List />
+  <Work />
+  <Link
+    url="/404"
+    text="View Portfolio"
+    className="cta"
+    title="View Portfolio"
+    hasIcon={ctaArrow}
+  />
 </div>
 
 <style lang="scss">
@@ -25,6 +48,18 @@ import List from "../pages/home/work.md";
   @import "../styles/mixin.scss";
   .card-list {
     position: relative;
+
+    .cta {
+      > svg {
+        margin-left: rem(10);
+        transition: 200ms ease-in-out;
+      }
+      &:hover{
+        > svg{
+          margin-left: rem(16);
+        }
+      }
+    }
     @include bp(1024) {
       margin-left: auto;
     }

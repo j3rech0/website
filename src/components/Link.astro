@@ -1,0 +1,30 @@
+---
+const { text, className, url, title, hasIcon } = Astro.props;
+---
+
+<a href={url || "/"} class={className && className + " " + "flex"} title={title}
+  >{text}
+  {hasIcon ? <Fragment set:html={hasIcon} /> : ""}
+</a>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta {
+    background-color: var(--c-bg-white);
+    color: var(--c-black);
+    padding: rem(10);
+    border-radius: var(--radius);
+    max-width: rem(190);
+    margin-left: auto;
+    margin-right: rem(103);
+    margin-top: rem(40);
+    text-align: center;
+    font-size: rem(18);
+    font-weight: 600;
+  }
+</style>

@@ -8,6 +8,7 @@
   --c-gray-200: #494949;
   --c-white: #fff;
 
+  --c-bg-white: #fff;
   --c-bg-gradient-1: #101014;
   --c-bg-gradient-2: #060606;
   --c-bg-gradient-3: #0c0e11;
@@ -22,6 +23,8 @@
   --p-medium: 2rem;
   --m-medium: 2rem;
   --m-large: 5rem;
+
+  --radius: 50px;
 }
 
 html {

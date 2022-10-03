@@ -1,0 +1,24 @@
+---
+const { title, url, src } = Astro.props;
+---
+
+<a href={url || "/"} title={title}>
+  <img src={src} alt={title} />
+</a>
+
+<style lang="scss">
+  a {
+    display: block;
+    opacity: 0.2;
+    transition: 200ms;
+    > img {
+      display: block;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+    + a {
+      margin-left: 2.5rem;
+    }
+  }
+</style>

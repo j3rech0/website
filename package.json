@@ -15,6 +15,7 @@
         "astro": "^1.2.7"
     },
     "devDependencies": {
+        "astro-compress": "1.0.9",
         "sass": "^1.54.9"
     }
 }
