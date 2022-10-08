@@ -1,20 +1,21 @@
 ---
-import TopFold from "./TopFold.astro";
+import WorkList from "./WorkList.astro";
 ---
 
 <main class="main-container">
-  <TopFold />
+  <WorkList />
 </main>
 
 <style lang="scss">
   @import "../styles/mixin.scss";
   .main-container {
+    border-top: 1px solid red;
     margin-inline: auto;
     margin-top: auto;
     @include bp(1024) {
       margin-right: -2rem;
       margin-left: -2rem;
-      // background: url("../assets/mountains.svg") no-repeat right bottom;
+      // background: url("../assets/mountains.svg") no-repeat left bottom;
       // background-size: 50%;
     }
     @include bp(1440) {
@@ -27,7 +28,4 @@ import TopFold from "./TopFold.astro";
   window.addEventListener("load", function () {
     document.body.classList.remove("blur");
   });
-  window.onbeforeunload = function () {
-    document.body.classList.add("blur");
-  };
 </script>

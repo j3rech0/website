@@ -1,15 +1,33 @@
 ---
-import SocialMedia from "./SocialMedia.astro";
+// import SocialMedia from "./SocialMedia.astro";
+const { footerClass } = Astro.props;
+const imgSrc = "assets/footer-dots.svg";
 ---
 
-<footer class="footer">
-  <SocialMedia />
+<footer
+  class={footerClass ? footerClass : "footer"}
+  style={"background-image: url(" + imgSrc + ")"}
+>
+  <!-- <SocialMedia /> -->
 </footer>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript
+  ><iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-TV8NVWT"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<!-- End Google Tag Manager (noscript) -->
 <!-- To do's -->
 <!-- Add work experiences -->
 <!-- Add animation -->
 <!-- Add UI framework? -->
 <!-- https://www.youtube.com/watch?v=T33NN_pPeNI -->
+<!-- https://css-tricks.com/svg-line-animation-works/ -->
+
 <style lang="scss">
   @import "../styles/mixin.scss";
   .footer {
@@ -20,20 +38,29 @@ import SocialMedia from "./SocialMedia.astro";
     }
     @include bp(1024) {
       width: 100%;
-      background: linear-gradient(180deg, rgb(0 0 0), transparent);
+      // border-top: 1px solid rgba(black, 0.2);
+      // background: linear-gradient(
+      //   178deg,
+      //   rgba(0, 0, 0, 0.1),
+      //   rgba(36, 36, 36, 0.13)
+      // );
       margin-left: -2rem;
       margin-right: -2rem;
       padding-inline: 2rem;
     }
     > div {
       margin-top: auto;
-      margin-bottom: 1rem;
+      margin-bottom: calc(var(--m-medium) + 2);
     }
     a {
       color: var(--c-gray);
       &:hover {
         color: var(--c-white);
       }
+    }
+    &-work {
+      border: 0;
+      background: none;
     }
   }
 </style>

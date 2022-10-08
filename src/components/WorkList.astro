@@ -1,15 +1,9 @@
 ---
-import Intro from "../components/Intro.astro";
-// import Coconut from "../components/Coconut.astro";
-import Me from "./Me.astro";
-// import WaterEffects from "./WaterEffects.astro";
 ---
 
 <div class="top-fold">
+  <p>test</p>
   <!-- <Coconut /> -->
-  <Intro />
-  <Me />
-  <!-- <WaterEffects /> -->
 </div>
 
 <style lang="scss">
@@ -19,8 +13,8 @@ import Me from "./Me.astro";
     cursor: default;
     @include bp(500) {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      // grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(377px, 1fr));
+      grid-gap: 1rem;
       place-content: center;
       margin-inline: auto;
       max-width: 80vw;
@@ -32,8 +26,8 @@ import Me from "./Me.astro";
       padding-inline: rem(30);
     }
     @include bp(1200) {
-      // grid-gap: 2rem;
-      padding-top: rem(70);
+      grid-gap: 2rem;
+      padding-top: rem(100);
     }
   }
 </style>

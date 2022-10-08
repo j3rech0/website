@@ -1,0 +1,42 @@
+---
+import * as src from "../pages/home/me.md";
+import Me from "../pages/home/me.md";
+---
+
+<div class="me-image">
+  <img src={src.frontmatter.me} alt="" class="me" loading="lazy" width="317" />
+  <Me />
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .me-image {
+    position: relative;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 317px;
+    background-image: none;
+    transition: 200ms;
+    @include bp(1024) {
+      margin-left: auto;
+    }
+    &:hover {
+      background-image: url("/assets/me.png");
+      .me {
+        opacity: 0.1;
+      }
+    }
+  }
+  .me {
+    transition: 200ms;
+    position: absolute;
+    margin: auto;
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    max-width: 80%;
+  }
+</style>

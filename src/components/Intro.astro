@@ -1,119 +1,182 @@
 ---
 import * as splash from "../pages/home/intro.md";
+import Link from "./Link.astro";
+import SocialMedia from "./SocialMedia.astro";
 ---
 
 <div class="splash-container">
   <div class="card-splash">
+    <h5
+      data-copy-sub={splash.frontmatter.slogan}
+      style="--shade: var(--c-gray);"
+    >
+      {splash.frontmatter.slogan}
+    </h5>
     <h1 data-copy={splash.frontmatter.title + " " + splash.frontmatter.name}>
       {splash.frontmatter.title}
       <span>{splash.frontmatter.name}</span>
     </h1>
-    <h5 data-copy-sub={splash.frontmatter.slogan}>
-      {splash.frontmatter.slogan}
-    </h5>
+    <p data-copy-description={splash.frontmatter.description}>
+      {splash.frontmatter.description}
+    </p>
+    <div class="splash-links">
+      <Link
+        url="/work"
+        text="View Portfolio"
+        className="cta"
+        title="View Portfolio"
+      />
+      <SocialMedia />
+    </div>
   </div>
-  <svg class="water">
-    <filter id="turbulence" x="0" y="0" width="100%" height="100%">
-      <feTurbulence
-        id="sea-filter"
-        numOctaves="3"
-        seed="1"
-        baseFrequency="0.02 0.05"></feTurbulence>
-      <feDisplacementMap scale="15" in="SourceGraphic"></feDisplacementMap>
-      <animate
-        xlink:href="#sea-filter"
-        attributeName="baseFrequency"
-        dur="60s"
-        keyTimes="0;0.5;1"
-        values="0.02 0.06;0.04 0.08;0.02 0.06"
-        repeatCount="indefinite"></animate>
-    </filter>
-  </svg>
-  <div class="water"></div>
 </div>
 
 <style lang="scss">
   @import "../styles/mixin.scss";
-  .water {
-    display: none;
+  .splash-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: var(--m-medium);
+    @include bp(768) {
+      flex-direction: row;
+    }
   }
   .splash-container {
+    position: relative;
+    margin-top: var(--m-large);
     margin-bottom: var(--m-medium);
-    @include bp(1440) {
-      margin-bottom: var(--m-large);
+    @include bp(1024){
+      margin-block: auto;
     }
   }
   .card-splash {
     cursor: default;
+    max-width: rem(680);
     > h5 {
-      color: var(--c-gray-200);
+      --shade: rgba(var(--c-gray), 0.58);
+      opacity: var(--opacity);
+      font-size: rem(20);
+      font-weight: 600;
+      margin-bottom: rem(20);
+      color: var(--c-white);
+      font-weight: 400;
+      font-family: var(--f-roboto-mono);
+      width: fit-content;
+      padding: rem(10) rem(20);
+      position: relative;
+      background-image: linear-gradient(
+        var(--shade, --defaultShadeColor),
+        var(--shade, --defaultShadeColor)
+      );
+      background-size: 70% rem(20);
+      background-repeat: no-repeat;
+      background-position: 0 calc(rem(20) / 5);
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   background: var(--shade, --defaultShadeColor);
+      //   width: 70%;
+      //   height: rem(16);
+      //   z-index: -1;
+      //   top: rem(16) - 0.7;
+      //   left: 0;
+      // }
     }
     > h1 {
-      font-size: 8vw;
+      font-size: 5vw;
       font-weight: 100;
-      color: var(--c-gray);
-      font-family: var(--f-roboto);
+      color: var(--c-white);
+      font-family: var(--f-abel);
+      margin-bottom: calc(8vw / 2);
       > span {
-        color: var(--c-white);
+        color: var(--c-green);
       }
-      @include bp(768) {
-        font-size: 4vw;
+      @include bp(1024) {
+        margin-bottom: calc(4vw / 2);
       }
       @include bp(1224) {
         font-size: rem(53);
+        margin-bottom: calc(rem(53) / 2);
       }
     }
+    > p {
+      font-size: rem(20);
+      color: var(--c-gray-400);
+      line-height: 1.7;
+      letter-spacing: 1px;
+      font-family: var(--f-roboto-mono);
+      font-weight: 100;
+      margin: 0;
+    }
+
     @include bp(1024) {
-      [data-copy-sub],
-      [data-copy] {
-        position: relative;
-        &::before {
-          pointer-events: none;
-          position: absolute;
-          transform: rotateX(222deg) translateX(-18px);
-        }
-      }
-      [data-copy] {
-        &::before {
-          content: attr(data-copy);
-          filter: blur(2px) url("#turbulence");
-          opacity: 0.5;
-          bottom: rem(-190);
-          padding-inline: 1rem;
-          white-space: nowrap;
-          @include bp(1024) {
-            bottom: rem(-222);
-          }
-          @include bp(1224) {
-            bottom: rem(-240);
-          }
-          @include bp(1440) {
-            bottom: rem(-294.4);
-          }
-        }
-      }
-      [data-copy-sub] {
-        &::before {
-          content: attr(data-copy-sub);
-          filter: blur(1px) url("#turbulence");
-          opacity: 0.4;
-          bottom: rem(-103);
-          transform: rotateX(170deg) translateX(-11px);
-          white-space: nowrap;
-          padding-inline: 0.5rem;
-          @include bp(1024) {
-            bottom: rem(-144);
-          }
-          @include bp(1440) {
-            bottom: rem(-192);
-          }
-        }
-      }
+      // .cta {
+      //   &::before {
+      //     content: "";
+      //     background: rgba(gray, 0.7);
+      //     width: 210px;
+      //     height: 21px;
+      //     border-radius: 50px;
+      //     filter: blur(10px) opacity(0.2);
+      //     bottom: -80px;
+      //     position: absolute;
+      //   }
+      // }
+      // [data-copy-sub] ,
+      // [data-copy],
+      // [data-copy-description] {
+      //   position: relative;
+      //   &::before {
+      //     pointer-events: none;
+      //     position: absolute;
+      //     filter: blur(1px) url("#turbulence") opacity(1);
+      //     transform: rotateX(135deg);
+      //   }
+      // }
+      // [data-copy] {
+      //   &::before {
+      //     content: attr(data-copy);
+      //     bottom: rem(-390);
+      //     white-space: nowrap;
+      //     padding-right: rem(20);
+      //     opacity: 0.1;
+      //   }
+      // }
+      // [data-copy-description] {
+      //   &::before {
+      //     content: attr(data-copy-description);
+      //     bottom: rem(-246);
+      //     opacity: 0.3;
+      //   }
+      // }
+      // [data-copy-sub] {
+      //   &::before {
+      //     content: attr(data-copy-sub);
+      //     filter: blur(1px) url("#turbulence");
+      //     opacity: 0.4;
+      //     bottom: rem(-103);
+      //     transform: rotateX(170deg) translateX(-11px);
+      //     white-space: nowrap;
+      //     padding-inline: 0.5rem;
+      //     @include bp(1024) {
+      //       bottom: rem(-144);
+      //     }
+      //     @include bp(1440) {
+      //       bottom: rem(-192);
+      //     }
+      //   }
+      // }
+      // [data-copy-description] {
+      //   &::before {
+      //     content: attr(data-copy-sub);
+      //     filter: blur(1px) url("#turbulence");
+      //     opacity: 0.4;
+      //     bottom: rem(-103);
+      //     transform: rotateX(170deg) translateX(-11px);
+      //     white-space: nowrap;
+      //     padding-inline: 0.5rem;
+      //   }
+      // }
     }
-  }
-  .card-splash > h5 {
-    font-size: 20px;
-    margin-top: 10px;
-    font-weight: 100;
   }
 </style>

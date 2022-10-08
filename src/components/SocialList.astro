@@ -1,21 +1,108 @@
 ---
-const { title, url, src } = Astro.props;
+const { title, url, classes, svg, target } = Astro.props;
+const svgHover = `<path d="M19.6962 9.7904C17.8868 9.7904 10.1157 14.858 7.94052 20.3562C7.32025 23.1401 6.6786 24.8467 6.6786 27.7423C6.6786 28.9962 7.3682 31.0058 7.94052 32.1475C8.64 33.5428 9.17694 35.089 10.1157 36.3374C11.6672 38.4007 13.9604 40.3166 16.2426 41.4546C22.1509 44.4011 28.0788 44.7771 34.7229 42.6471C38.0373 41.5845 40.8297 40.2029 43.1412 37.5132C45.0312 35.314 48.3881 30.6767 48.3881 27.7423C48.3881 24.7074 48.8198 23.5621 48.8198 20.3562C48.8198 18.7295 49.4365 15.1587 48.3881 13.9637C48.193 13.7413 47.7314 12.6233 47.6409 12.3076C47.4516 11.6467 46.7287 11.2692 46.3624 10.6847C45.7221 9.66293 44.5815 8.79901 43.9714 7.70374C43.4543 6.77539 41.8747 5.27744 40.9163 5.00433C38.4497 4.30143 36.3159 1.8936 33.5773 1.74185C31.7417 1.64014 30.0382 1.14566 28.1975 1.14566C27.0419 1.14566 24.8757 0.734031 23.8639 1.29471C22.7188 1.92922 20.9362 1.40506 19.6962 1.75841C18.4133 2.12402 16.6258 2.13505 15.3459 2.70238C10.449 4.87311 5.66679 6.99763 1 9.7904" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round"/>`;
 ---
 
-<a href={url || "/"} title={title}>
-  <img src={src} alt={title} />
+<a href={url || "/"} title={title} target={target} class={classes}>
+  <svg
+    width="50"
+    height="45"
+    viewBox="0 0 50 45"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="svgHover"
+    ><Fragment set:html={svgHover} />
+  </svg>
+  <Fragment set:html={svg} />
 </a>
 
 <style lang="scss">
+  @import "../styles/mixin.scss";
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 150;
+    }
+  }
+  @keyframes dashReverse {
+    from {
+      stroke-dashoffset: 150;
+    }
+    to {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
   a {
-    display: block;
-    opacity: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     transition: 200ms;
+    :global(.svgIcon) {
+      padding-left: rem(8);
+    }
+    :global(.svgIcon path) {
+      stroke-dashoffset: 1;
+      stroke-width: 1;
+      transition: 200ms;
+    }
+    :global(.svgHover) {
+      position: absolute;
+      opacity: 0;
+      transition: 0s cubic-bezier(0.8, 0.03, 0.73, 0.97);
+      transition-duration: 500ms;
+    }
+    :global(.svgHover path) {
+      stroke-dasharray: 150;
+      stroke-dashoffset: -150;
+      animation: dash 500ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
+      animation-delay: 0s;
+    }
+    &:hover {
+      :global(.svgIcon path) {
+        stroke-width: 2;
+      }
+      :global(.svgHover) {
+        opacity: 1;
+      }
+      :global(.svgHover path) {
+        animation: dashReverse 500ms;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
+        animation-delay: 0s;
+      }
+    }
+    &.link-codepen {
+      &:hover {
+        :global(.svgIcon path) {
+          stroke: white;
+        }
+      }
+    }
+    &.link-youtube {
+      &:hover {
+        :global(.svgIcon path) {
+          stroke: var(--c-youtube);
+        }
+      }
+    }
+    &.link-dribbble {
+      &:hover {
+        :global(.svgIcon path) {
+          stroke: var(--c-dribbble);
+        }
+      }
+    }
     > img {
       display: block;
     }
-    &:hover {
-      opacity: 0.9;
+    path {
+      stroke: white;
     }
     + a {
       margin-left: 2.5rem;

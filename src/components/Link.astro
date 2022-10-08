@@ -1,10 +1,35 @@
 ---
 const { text, className, url, title, hasIcon } = Astro.props;
+const icon = `<svg
+        width="18"
+        height="16"
+        viewBox="0 0 18 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="svg"
+      >
+        <path
+          d="M1 8H17M10 1L17 8L10 15"
+          stroke="black"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>`;
 ---
 
 <a href={url || "/"} class={className && className + " " + "flex"} title={title}
   >{text}
-  {hasIcon ? <Fragment set:html={hasIcon} /> : ""}
+
+  {
+    hasIcon ? (
+      <div class="svg">
+        <Fragment set:html={icon} />
+      </div>
+    ) : (
+      ""
+    )
+  }
 </a>
 
 <style lang="scss">
@@ -15,16 +40,31 @@ const { text, className, url, title, hasIcon } = Astro.props;
     justify-content: center;
   }
   .cta {
-    background-color: var(--c-bg-white);
+    background-color: var(--c-green);
     color: var(--c-black);
     padding: rem(10);
     border-radius: var(--radius);
+    width: 100%;
+    height: fit-content;
     max-width: rem(190);
-    margin-left: auto;
-    margin-right: rem(103);
-    margin-top: rem(40);
     text-align: center;
-    font-size: rem(18);
+    font-size: rem(14);
     font-weight: 600;
+    font-family: var(--f-roboto-mono);
+    letter-spacing: 1px;
+    transition: 200ms;
+    .svg {
+      margin-left: rem(10);
+      transition: 200ms ease-in-out;
+      display: flex;
+    }
+    &:hover {
+      filter: drop-shadow(0px 0px 4px lightblue);
+      
+      letter-spacing: 2px;
+      .svg {
+        margin-left: rem(16);
+      }
+    }
   }
 </style>

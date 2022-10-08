@@ -1,17 +1,35 @@
 :root {
+  /* 
+  Color pallete : https://mycolor.space/?hex=%2316161D&sub=1
+  background dark: #16161D
+  foreground light: #E2F1F0
+  accent 1:  #408D8A
+  accent 2:  #5BECC0
+  */
   --f-rubik: "Rubik Glitch", cursive;
   --f-roboto: "Roboto", sans-serif;
-  --c-black: #040404;
-  --c-blue: #46b4ff;
-  --c-gray: #8d8d8d;
-  --c-gray-100: #dbdbdb;
+  --f-roboto-mono: "Roboto Mono", monospace;
+  --f-abel: "Abel", sans-serif;
+  --c-black: #16161d;
+  --c-green: #5becc0;
+  --c-blue: #abcee5;
+  --c-gray: #28293f;
+  --c-gray-100: #cacad4;
   --c-gray-200: #494949;
-  --c-white: #fff;
+  --c-gray-300: #767687;
+  --c-gray-400: #a1a1a1;
+  --c-white: #e2f1f0;
+  --c-youtube: #f00;
+  --c-dribbble: #ea4c89;
 
-  --c-bg-white: #fff;
+  --c-bg-white: #ebebcf;
   --c-bg-gradient-1: #101014;
   --c-bg-gradient-2: #060606;
   --c-bg-gradient-3: #0c0e11;
+
+  --c-body-gradient-1: 0, 198, 195;
+  --c-body-gradient-2: 21, 133, 130;
+  --c-body-gradient-3: 211, 251, 216;
 
   --t-fg: var(--c-black);
   --t-bg: var(--c-white);
@@ -20,6 +38,7 @@
   --h-full: 100vh;
 
   --p-tiny: 0.7rem;
+  --m-tiny: 0.7rem;
   --p-medium: 2rem;
   --m-medium: 2rem;
   --m-large: 5rem;
@@ -30,21 +49,31 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 body {
+  --bottomLeft: ellipse at bottom left, rgba(var(--c-body-gradient-1), 0.08),
+    var(--c-black), rgba(var(--c-body-gradient-1), 0) 100%;
+  --topRight: ellipse at top right, rgba(var(--c-body-gradient-2), 0.08),
+    var(--c-black), rgba(var(--c-body-gradient-2), 0) 100%;
+  --topRight2: ellipse at top right, rgba(var(--c-body-gradient-3), 0.05),
+    var(--c-black), rgba(var(--c-body-gradient-3), 0) 100%;
   margin: 0;
   color: var(--c-gray-100);
   font-family: "Abel", sans-serif;
-  background: radial-gradient(
-    128.09% 128.09% at 50% 20.88%,
-    #111111 0%,
-    #000000 100%
-  );
-
-  height: calc(var(--h-full) - var(--p-medium) * 2);
+  background-image: radial-gradient(var(--bottomLeft)),
+    radial-gradient(var(--topRight)), radial-gradient(var(--topRight2));
+  background-color: var(--c-black);
+  background-size: 20vw 30vh, 20vw 30vh, 20vw 40vh;
+  background-repeat: no-repeat;
+  background-position: -10% 120%, top right, top right;
   padding: var(--p-medium);
+}
+@media (min-width: 1000px) {
+  body {
+    height: calc(var(--h-full) - var(--p-medium) * 2);
+  }
 }
 
 body::-webkit-scrollbar {
@@ -88,6 +117,7 @@ h6 {
 }
 h1 {
   font-size: var(--f-u8);
+  line-height: 1;
 }
 ul {
   list-style: none;

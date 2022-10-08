@@ -17,4 +17,5 @@ export default defineConfig({
   ],
   output: "server",
   adapter: netlify(),
+  site: "https://j3rech0.netlify.app",
 });

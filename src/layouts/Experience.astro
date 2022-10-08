@@ -7,13 +7,13 @@ import Header from "../components/Header.astro";
 <html lang="en">
   <head>
     <MetaHead
-      title="Jech | Web Developer and designer"
+      title="Jech | Portfolio"
       description="My name is Jech and I'm a Freelance Web Developer and designer from the Philippines"
     />
     <style lang="scss">
       @import "../styles/mixin.scss";
       .blur {
-        filter: blur(5px) opacity(0.01);
+        filter: blur(10px) opacity(0.01);
         transform: translate(0, -10px);
       }
       body {
@@ -22,15 +22,21 @@ import Header from "../components/Header.astro";
         transition: 500ms;
       }
       .container-grid {
-        // display: grid;
+        display: grid;
         grid-template-areas:
           "header"
           "content"
           "footer";
         grid-template-columns: 1fr;
-        grid-template-rows: 10vh 60vh calc(20vh);
+        grid-template-rows: 6vh 60vh calc(32vh - var(--p-medium));
         @include bp(960) {
-          grid-template-rows: 10vh 60vh calc(26vh - var(--p-medium));
+          grid-template-rows: 6vh 50vh calc(43vh - var(--p-medium));
+        }
+        @include bp(1024) {
+          grid-template-rows: 6vh 60vh calc(34vh - var(--p-medium));
+        }
+        @include bp(1440) {
+          grid-template-rows: 6vh 64vh calc(30vh - var(--p-medium));
         }
       }
     </style>
@@ -39,7 +45,7 @@ import Header from "../components/Header.astro";
     <div class="container-grid">
       <Header />
       <slot />
-      <Footer />
+      <Footer footerClass="footer footer-work" />
     </div>
   </body>
 </html>

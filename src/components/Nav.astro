@@ -2,24 +2,24 @@
   <a class="link" href="/" title="Hi">
     <div class="logo">
       <svg
-        width="29"
-        height="44"
-        viewBox="0 0 29 44"
+        width="32"
+        height="50"
+        viewBox="0 0 32 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
-          d="M22 5.18868C22 5.25818 21.9986 5.32737 21.9959 5.39621H22V38.8113V39.0188H21.9959C21.887 41.7883 19.6074 44 16.8113 44C14.0152 44 11.7356 41.7883 11.6267 39.0188H11.6226V38.8113V5.39621H11.6267C11.624 5.32737 11.6226 5.25818 11.6226 5.18868C11.6226 2.32305 13.9457 0 16.8113 0C19.6769 0 22 2.32305 22 5.18868ZM27.1218 6.50086C26.1487 5.5278 24.8289 4.98114 23.4528 4.98114V10.1698L23.4528 15.3585C24.8289 15.3585 26.1487 14.8118 27.1218 13.8388C28.0948 12.8657 28.6415 11.5459 28.6415 10.1698C28.6415 8.79369 28.0948 7.47393 27.1218 6.50086ZM10.3733 26.9811C10.376 26.9123 10.3774 26.8431 10.3774 26.7736C10.3774 23.908 8.05431 21.5849 5.18868 21.5849C2.32305 21.5849 0 23.908 0 26.7736C0 26.8431 0.00136664 26.9123 0.00407452 26.9811H0V33.2076H0.0369727C0.0125602 33.4117 0 33.6195 0 33.8302C0 36.6958 2.32305 39.0189 5.18868 39.0189C8.05431 39.0189 10.3774 36.6958 10.3774 33.8302C10.3774 33.6195 10.3648 33.4117 10.3404 33.2076H10.3774V26.9811H10.3733Z"
-          fill="url(#paint0_linear_814_7)"></path>
+          d="M24.5797 5.7971C24.5797 5.87476 24.5782 5.95205 24.5751 6.02897H24.5797V43.3623V43.5942H24.5751C24.4534 46.6884 21.9066 49.1594 18.7826 49.1594C15.6586 49.1594 13.1117 46.6884 12.99 43.5942H12.9855V43.3623V6.02897H12.99C12.987 5.95205 12.9855 5.87476 12.9855 5.7971C12.9855 2.59545 15.5809 0 18.7826 0C21.9842 0 24.5797 2.59545 24.5797 5.7971ZM30.302 7.26316C29.2149 6.17599 27.7404 5.56523 26.2029 5.56523V11.3623L26.2029 17.1594C27.7404 17.1594 29.2149 16.5487 30.302 15.4615C31.3892 14.3743 32 12.8998 32 11.3623C32 9.82484 31.3892 8.35033 30.302 7.26316ZM11.5897 30.1449C11.5927 30.068 11.5942 29.9907 11.5942 29.9131C11.5942 26.7114 8.99875 24.116 5.7971 24.116C2.59545 24.116 0 26.7114 0 29.9131C0 29.9907 0.00152685 30.068 0.00455217 30.1449H0V37.1015H0.0413096C0.0140335 37.3295 0 37.5617 0 37.7971C0 40.9988 2.59545 43.5942 5.7971 43.5942C8.99875 43.5942 11.5942 40.9988 11.5942 37.7971C11.5942 37.5617 11.5802 37.3295 11.5529 37.1015H11.5942V30.1449H11.5897Z"
+          fill="url(#paint0_linear_952_12)"></path>
         <defs>
           <linearGradient
-            id="paint0_linear_814_7"
-            x1="24.3453"
-            y1="-0.954717"
-            x2="1.43207"
-            y2="43.917"
+            id="paint0_linear_952_12"
+            x1="27.2"
+            y1="-1.06667"
+            x2="1.6"
+            y2="49.0667"
             gradientUnits="userSpaceOnUse"
           >
             <stop stop-color="white"></stop>
@@ -33,25 +33,29 @@
 </nav>
 
 <style lang="scss">
+  @import "../styles/mixin.scss";
   .navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: rem(10);
   }
   .navigation > a:not(:first-child) {
-    color: rgba(0, 0, 0, 0);
-    background: var(--c-gray);
+    color: var(--c-gray-300);
+    background: var(--c-gray-200);
     -webkit-background-clip: text;
-    background-image: radial-gradient(var(--c-gray), var(--c-gray));
+    background-image: radial-gradient(var(--c-white), var(--c-white));
     background-size: 40px 87px;
     background-repeat: no-repeat;
-    background-position: -340% center;
-    transition: 300ms ease-in-out;
-    font-size: 1rem;
+    background-position: -120% center;
+    transition: 500ms ease-in-out;
+    font-size: rem(16);
+    font-family: var(--f-roboto-mono);
+    letter-spacing: 1px;
     &:hover {
-      background-image: radial-gradient(white, rgba(black, 40%));
-      background-position: 510% center;
-      color: var(--c-gray);
+      background-image: radial-gradient(white, rgba(black, 0%));
+      background-position: 200% center;
+      color: var(--c-gray-100);
     }
   }
 </style>
