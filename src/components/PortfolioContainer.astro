@@ -11,18 +11,9 @@ import WorkList from "./WorkList.astro";
   .main-container {
     margin-inline: auto;
     margin-block: auto;
-    @include bp(1024) {
+    @include bp(1200) {
       margin-right: -2rem;
       margin-left: -2rem;
     }
-    @include bp(1440) {
-      background-size: rem(888);
-    }
   }
 </style>
-
-<script defer>
-  window.addEventListener("load", function () {
-    document.body.classList.remove("blur");
-  });
-</script>

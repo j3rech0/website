@@ -11,15 +11,14 @@ import Header from "../components/Header.astro";
     />
     <style lang="scss">
       @import "../styles/mixin.scss";
-      .blur {
+      .anim.blur {
         filter: blur(5px) opacity(0);
         transform: translate(0, -10px);
-        background-image: none;
       }
-      body {
+      .anim {
         filter: blur(0) opacity(1);
         transform: translate(0, 0);
-        transition: filter 300ms;
+        transition: 300ms;
       }
       .container-grid {
         grid-template-areas:
@@ -34,16 +33,17 @@ import Header from "../components/Header.astro";
       }
     </style>
   </head>
-  <body class="blur">
-    <div class="container-grid">
+  <body>
+    <div class="container-grid blur anim">
       <Header />
       <slot />
       <script defer>
+        const animClass = document.querySelector(".anim");
         window.addEventListener("load", function () {
-          document.body.classList.remove("blur");
+          animClass.classList.remove("blur");
         });
         window.onbeforeunload = function () {
-          document.body.classList.add("blur");
+          animClass.classList.add("blur");
         };
       </script>
     </div>
