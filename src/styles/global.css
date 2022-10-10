@@ -36,6 +36,7 @@
   --t-active: var(--c-blue);
 
   --h-full: 100vh;
+  --w-full: 75rem; /* 1200px; */
 
   --p-tiny: 0.7rem;
   --m-tiny: 0.7rem;
@@ -67,7 +68,7 @@ body {
   background-color: var(--c-black);
   background-size: 20vw 30vh, 20vw 30vh, 20vw 40vh;
   background-repeat: no-repeat;
-  background-position: -10% 120%, top right, top right;
+  background-position: 0 100%, top right, top right;
   padding: var(--p-medium);
 }
 @media (min-width: 1000px) {

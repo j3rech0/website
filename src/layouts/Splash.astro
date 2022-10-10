@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 import MetaHead from "../components/MetaHead.astro";
 import Header from "../components/Header.astro";
 ---
@@ -13,24 +12,24 @@ import Header from "../components/Header.astro";
     <style lang="scss">
       @import "../styles/mixin.scss";
       .blur {
-        filter: blur(5px) opacity(0.01);
+        filter: blur(5px) opacity(0);
         transform: translate(0, -10px);
+        background-image: none;
       }
       body {
         filter: blur(0) opacity(1);
         transform: translate(0, 0);
-        transition: transform 500ms, filter 300ms;
+        transition: filter 300ms;
       }
       .container-grid {
-        // display: grid;
         grid-template-areas:
           "header"
-          "content"
-          "footer";
+          "content";
         grid-template-columns: 1fr;
-        grid-template-rows: 10vh 60vh calc(20vh);
-        @include bp(960) {
-          grid-template-rows: 10vh 60vh calc(26vh - var(--p-medium));
+        grid-template-rows: 10vh 60vh;
+        @include bp(1000) {
+          grid-template-rows: 10vh 70vh;
+          display: grid;
         }
       }
     </style>
@@ -39,7 +38,6 @@ import Header from "../components/Header.astro";
     <div class="container-grid">
       <Header />
       <slot />
-      <Footer />
       <script defer>
         window.addEventListener("load", function () {
           document.body.classList.remove("blur");

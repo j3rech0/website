@@ -1,33 +1,55 @@
 ---
+import * as work from "../pages/home/work.md";
 ---
 
-<div class="top-fold">
-  <p>test</p>
-  <!-- <Coconut /> -->
+<div class="work-list">
+  <div class="heading-panel">
+    <h5 style="--shade: var(--c-gray);">{work.frontmatter.title}</h5>
+    <p>{work.frontmatter.description}</p>
+  </div>
 </div>
 
 <style lang="scss">
   @import "../styles/mixin.scss";
 
-  .top-fold {
-    cursor: default;
+  .work-list {
     @include bp(500) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(377px, 1fr));
-      grid-gap: 1rem;
-      place-content: center;
       margin-inline: auto;
       max-width: 80vw;
-      align-items: flex-end;
     }
     @include bp(1024) {
       padding-bottom: rem(20);
-      max-width: rem(1200);
       padding-inline: rem(30);
     }
     @include bp(1200) {
-      grid-gap: 2rem;
-      padding-top: rem(100);
+      max-width: rem(1200);
+      padding-top: rem(70);
+    }
+  }
+  .heading-panel {
+    > h5 {
+      opacity: var(--opacity);
+      font-size: rem(20);
+      font-weight: 600;
+      margin-bottom: rem(20);
+      color: var(--c-white);
+      font-weight: 400;
+      font-family: var(--f-roboto-mono);
+      width: fit-content;
+      padding: rem(10) rem(20);
+      position: relative;
+      background-image: linear-gradient(
+        var(--shade, --defaultShadeColor),
+        var(--shade, --defaultShadeColor)
+      );
+      background-size: 70% rem(20);
+      background-repeat: no-repeat;
+      background-position: 0 calc(rem(20) / 5);
+    }
+    > p {
+      color: var(--c-gray-400);
+      font-size: rem(18);
+      line-height: 1.6;
     }
   }
 </style>

@@ -9,14 +9,11 @@ import WorkList from "./WorkList.astro";
 <style lang="scss">
   @import "../styles/mixin.scss";
   .main-container {
-    border-top: 1px solid red;
     margin-inline: auto;
-    margin-top: auto;
+    margin-block: auto;
     @include bp(1024) {
       margin-right: -2rem;
       margin-left: -2rem;
-      // background: url("../assets/mountains.svg") no-repeat left bottom;
-      // background-size: 50%;
     }
     @include bp(1440) {
       background-size: rem(888);
