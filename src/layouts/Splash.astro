@@ -19,7 +19,7 @@ import Header from "../components/Header.astro";
       body {
         filter: blur(0) opacity(1);
         transform: translate(0, 0);
-        transition: 500ms;
+        transition: transform 500ms, filter 300ms;
       }
       .container-grid {
         // display: grid;
@@ -40,6 +40,14 @@ import Header from "../components/Header.astro";
       <Header />
       <slot />
       <Footer />
+      <script defer>
+        window.addEventListener("load", function () {
+          document.body.classList.remove("blur");
+        });
+        window.onbeforeunload = function () {
+          document.body.classList.add("blur");
+        };
+      </script>
     </div>
   </body>
 </html>

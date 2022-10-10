@@ -22,12 +22,3 @@ import TopFold from "./TopFold.astro";
     }
   }
 </style>
-
-<script defer>
-  window.addEventListener("load", function () {
-    document.body.classList.remove("blur");
-  });
-  window.onbeforeunload = function () {
-    document.body.classList.add("blur");
-  };
-</script>
