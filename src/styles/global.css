@@ -30,6 +30,7 @@
   --c-body-gradient-1: 0, 198, 195;
   --c-body-gradient-2: 21, 133, 130;
   --c-body-gradient-3: 211, 251, 216;
+  --c-black-gradient-1: 22, 22, 29;
 
   --t-fg: var(--c-black);
   --t-bg: var(--c-white);
@@ -54,12 +55,12 @@ html {
 }
 
 body {
-  --bottomLeft: ellipse at center, rgba(var(--c-body-gradient-1), 0.08),
+  /* --bottomLeft: ellipse at center, rgba(var(--c-body-gradient-1), 0.08),
     var(--c-black), rgba(var(--c-body-gradient-1), 0) 100%;
   --topRight: ellipse at top right, rgba(var(--c-body-gradient-2), 0.08),
     var(--c-black), rgba(var(--c-body-gradient-2), 0) 100%;
   --topRight2: ellipse at top right, rgba(var(--c-body-gradient-3), 0.05),
-    var(--c-black), rgba(var(--c-body-gradient-3), 0) 100%;
+    var(--c-black), rgba(var(--c-body-gradient-3), 0) 100%; */
   margin: 0;
   color: var(--c-gray-100);
   font-family: "Abel", sans-serif;

@@ -27,7 +27,6 @@ import Header from "../components/Header.astro";
         grid-template-columns: 1fr;
         grid-template-rows: 10vh 60vh;
         @include bp(1000) {
-          grid-template-rows: 10vh 70vh;
           display: grid;
         }
       }
@@ -43,9 +42,9 @@ import Header from "../components/Header.astro";
           if (animClass.classList.contains("blur"))
             animClass.classList.remove("blur");
         });
-        window.onbeforeunload = function () {
-          animClass.classList.add("blur");
-        };
+        // window.onbeforeunload = function () {
+        //   animClass.classList.add("blur");
+        // };
       </script>
     </div>
   </body>

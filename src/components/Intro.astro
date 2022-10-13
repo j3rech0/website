@@ -45,7 +45,7 @@ import SocialMedia from "./SocialMedia.astro";
     position: relative;
     margin-top: var(--m-large);
     margin-bottom: var(--m-medium);
-    @include bp(1024){
+    @include bp(1024) {
       margin-block: auto;
     }
   }
@@ -83,13 +83,16 @@ import SocialMedia from "./SocialMedia.astro";
       // }
     }
     > h1 {
-      font-size: 5vw;
+      font-size: 7vw;
       font-weight: 100;
       color: var(--c-white);
       font-family: var(--f-abel);
       margin-bottom: calc(8vw / 2);
       > span {
         color: var(--c-green);
+      }
+      @include bp(600){
+        font-size: 5vw;
       }
       @include bp(1024) {
         margin-bottom: calc(4vw / 2);
@@ -100,13 +103,17 @@ import SocialMedia from "./SocialMedia.astro";
       }
     }
     > p {
-      font-size: rem(20);
+      font-size: rem(18);
       color: var(--c-gray-400);
       line-height: 1.7;
       letter-spacing: 1px;
       font-family: var(--f-roboto-mono);
       font-weight: 100;
       margin: 0;
+      @include bp(1050) {
+        width: rem(510);
+        font-size: rem(20);
+      }
     }
 
     @include bp(1024) {
