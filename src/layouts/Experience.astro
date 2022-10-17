@@ -12,15 +12,6 @@ import Footer from "../components/Footer.astro";
     />
     <style lang="scss">
       @import "../styles/mixin.scss";
-      .anim.blur {
-        filter: blur(5px) opacity(0);
-        transform: translate(0, -10px);
-      }
-      .anim {
-        filter: blur(0) opacity(1);
-        transform: translate(0, 0);
-        transition: transform 300ms, filter 300ms;
-      }
       .container-grid {
         display: grid;
         grid-template-areas:
@@ -44,9 +35,6 @@ import Footer from "../components/Footer.astro";
         window.addEventListener("load", function () {
           animClass.classList.remove("blur");
         });
-        // window.onbeforeunload = function () {
-        //   animClass.classList.add("blur");
-        // };
       </script>
     </div>
   </body>
