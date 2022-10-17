@@ -1,37 +1,18 @@
 ---
 import * as work from "../pages/home/work.md";
-const workList = [
-  {
-    title: "Arcanys",
-    imgSrc: "assets/arcanys.png",
-    link: "https://arcanys.com",
-  },
-  {
-    title: "BloomLocal",
-    imgSrc: "assets/bloomlocal.png",
-    link: "https://www.bloomlocal.co.uk",
-  },
-  {
-    title: "RegisterNow",
-    imgSrc: "assets/registernow.png",
-    link: "https://registernow.io",
-  },
-  {
-    title: "RateMyAgent",
-    imgSrc: "assets/propertybanter.png",
-    link: "https://www.propertybanter.com.au",
-  },
-  {
-    title: "Arcanys Early Learning Foundation",
-    imgSrc: "assets/elearning.png",
-    link: "https://www.arcanysfoundation.org",
-  },
-  {
-    title: "FloristMart",
-    imgSrc: "assets/floristmart.png",
-    link: "https://find.florismart.com/en/",
-  },
-];
+export interface Project {
+  title: string;
+  publishDate: string;
+  imgSrc: string;
+}
+
+const posts = (await Astro.glob<Project>("../pages/work/*.md"))
+  .filter(({ frontmatter }) => !!frontmatter.publishDate)
+  .sort(
+    (a, b) =>
+      new Date(a.frontmatter.publishDate).valueOf() -
+      new Date(b.frontmatter.publishDate).valueOf()
+  );
 ---
 
 <div class="work-list">
@@ -42,15 +23,14 @@ const workList = [
   </div>
   <ul>
     {
-      workList.map((item) => (
+      posts.map((post) => (
         <li>
           <a
-            href={item.link}
-            title={item.title}
-            data-title={item.title}
-            target="_blank"
+            href={post.url}
+            title={post.frontmatter.title}
+            data-title={post.frontmatter.title}
           >
-            <img src={item.imgSrc} alt={item.title} />
+            <img src={post.frontmatter.imgSrc} alt={post.frontmatter.title} />
           </a>
         </li>
       ))

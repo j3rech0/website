@@ -1,6 +1,7 @@
 ---
 import MetaHead from "../components/MetaHead.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -24,9 +25,10 @@ import Header from "../components/Header.astro";
         display: grid;
         grid-template-areas:
           "header"
-          "content";
+          "content"
+          "footer";
         @include bp(1000) {
-          grid-template-rows: 10vh 90%;
+          grid-template-rows: 1fr;
           display: grid;
         }
       }
@@ -36,6 +38,7 @@ import Header from "../components/Header.astro";
     <div class="container-grid blur anim">
       <Header />
       <slot />
+      <Footer />
       <script defer>
         const animClass = document.querySelector(".anim");
         window.addEventListener("load", function () {

@@ -1,0 +1,185 @@
+---
+import Link from "./Link.astro";
+const icon = `<svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g opacity="0.5">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M33 22C33 22.3647 32.8551 22.7144 32.5973 22.9723C32.3394 23.2302 31.9897 23.375 31.625 23.375H15.6943L21.5985 29.2765C21.7263 29.4044 21.8278 29.5561 21.8969 29.7232C21.9661 29.8902 22.0017 30.0692 22.0017 30.25C22.0017 30.4308 21.9661 30.6098 21.8969 30.7769C21.8278 30.9439 21.7263 31.0957 21.5985 31.2235C21.4707 31.3514 21.3189 31.4528 21.1519 31.522C20.9848 31.5912 20.8058 31.6268 20.625 31.6268C20.4442 31.6268 20.2652 31.5912 20.0981 31.522C19.9311 31.4528 19.7793 31.3514 19.6515 31.2235L11.4015 22.9735C11.2735 22.8458 11.1719 22.6941 11.1025 22.527C11.0332 22.36 10.9975 22.1809 10.9975 22C10.9975 21.8192 11.0332 21.6401 11.1025 21.473C11.1719 21.306 11.2735 21.1543 11.4015 21.0265L19.6515 12.7765C19.9097 12.5183 20.2599 12.3733 20.625 12.3733C20.9901 12.3733 21.3403 12.5183 21.5985 12.7765C21.8567 13.0347 22.0017 13.3849 22.0017 13.75C22.0017 14.1152 21.8567 14.4653 21.5985 14.7235L15.6943 20.625H31.625C31.9897 20.625 32.3394 20.7699 32.5973 21.0278C32.8551 21.2856 33 21.6354 33 22Z"
+                  fill="white"></path>
+              </g>
+            </svg>`;
+const { responsibilities, title, imgSrcfull, link, description, builtwith } =
+  Astro.props;
+---
+
+<div class="project-container">
+  <header>
+    <Link
+      className="flex-row-reverse"
+      url="/work"
+      text="back to portfolio"
+      title="back to portfolio"
+      hasIcon={icon}
+    />
+  </header>
+  <div class="project-main">
+    <div class="project-screenshot">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <img src={imgSrcfull} alt="" width="493" />
+      </a>
+    </div>
+    <div class="project-details">
+      <header>
+        <h3>{title}</h3>
+        <a href={link} target="_blank" rel="noopener noreferrer"
+          ><img src="/assets/bx_link-alt.svg" alt="" width="17" />{link}
+        </a>
+      </header>
+      <div><p>{description}</p></div>
+      <div>
+        <h5>Built With:</h5>
+        <span>{builtwith}</span>
+      </div>
+      <div>
+        <h5>Responsibilities:</h5>
+        <ul>
+          {responsibilities.map((r) => <li>{r}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  .project {
+    &-container {
+      max-width: rem(1040);
+      margin-inline: auto;
+      margin-block: rem(50);
+      > header {
+        margin-bottom: rem(50);
+        a {
+          color: var(--c-gray-500);
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+    &-main {
+      display: flex;
+      flex-direction: column-reverse;
+      color: var(--c-gray-500);
+      a {
+        color: var(--c-gray-500);
+      }
+      @include bp(768) {
+        flex-direction: row;
+      }
+    }
+    &-screenshot {
+      position: relative;
+      a {
+        display: block;
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          transition: background-image 300ms;
+          background-image: linear-gradient(
+            0deg,
+            #16161d 10.94%,
+            rgba(27, 27, 27, 0) 100%
+          );
+          bottom: 0;
+        }
+        &:hover {
+          &::before {
+            background-image: linear-gradient(
+              0deg,
+              #16161d 10.94%,
+              rgba(27, 27, 27, 0) 60%
+            );
+          }
+        }
+      }
+      @include bp(768) {
+        width: 50%;
+      }
+    }
+    &-details {
+      margin-bottom: rem(50);
+      @include bp(768) {
+        width: 50%;
+        margin-left: rem(40);
+      }
+      a {
+        transition: 300ms;
+        display: flex;
+        align-items: center;
+        > img {
+          margin-right: rem(10);
+        }
+        &:hover {
+          color: white;
+        }
+      }
+      > p {
+        margin-top: rem(20);
+      }
+      > div {
+        + div {
+          margin-top: rem(30);
+        }
+      }
+      h5,
+      h3 {
+        font-family: var(--f-roboto-mono);
+        color: white;
+        line-height: 1.6;
+        font-weight: 400;
+        margin-bottom: rem(5);
+      }
+      h3 {
+        font-size: rem(20);
+        margin-bottom: rem(5);
+      }
+      h5 {
+        font-size: rem(16);
+      }
+      li {
+        position: relative;
+        padding-left: rem(20);
+        &::before {
+          content: "";
+          position: absolute;
+          width: 13px;
+          height: 1px;
+          background-color: var(--c-green);
+          top: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+        }
+        + li {
+          margin-top: rem(6);
+        }
+      }
+    }
+  }
+  header {
+    > .flex-row-reverse {
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+    }
+  }
+</style>
