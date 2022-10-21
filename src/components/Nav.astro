@@ -1,5 +1,5 @@
 <nav class="navigation">
-  <a class="link" href="/" title="Hi">
+  <a class="link animTrigger" href="/" title="Hi">
     <div class="logo">
       <svg
         width="32"
@@ -39,22 +39,17 @@
     align-items: center;
     justify-content: space-between;
     padding: rem(10);
+    .logo {
+      pointer-events: none; // tf is this bug!!!, wrapping anchor is not clickable!
+    }
   }
   .navigation > a:not(:first-child) {
     color: var(--c-gray-300);
-    background: var(--c-gray-200);
-    -webkit-background-clip: text;
-    background-image: radial-gradient(var(--c-white), var(--c-white));
-    background-size: 40px 87px;
-    background-repeat: no-repeat;
-    background-position: -120% center;
     transition: 500ms ease-in-out;
     font-size: rem(16);
     font-family: var(--f-roboto-mono);
     letter-spacing: 1px;
     &:hover {
-      background-image: radial-gradient(white, rgba(black, 0%));
-      background-position: 200% center;
       color: var(--c-gray-100);
     }
   }

@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import PortfolioDetails from "../components/PortfolioDetails.astro";
 const MainEl = "main";
-const MainClass = "main-container";
+const MainClass = "main-container transition-fade";
 const { title, imgSrcfull, link, description, responsibilities, builtwith } =
   Astro.props.frontmatter || Astro.props;
 ---
@@ -15,8 +15,7 @@ const { title, imgSrcfull, link, description, responsibilities, builtwith } =
       title="Jech | Portfolio"
       description="My name is Jech and I'm a Freelance Web Developer and designer from the Philippines"
     />
-    <style lang="scss">
-      @import "../styles/mixin.scss";
+    <style is:inline>
       .container-grid {
         display: grid;
         height: calc(100vh - var(--m-medium) * 2);
@@ -24,16 +23,19 @@ const { title, imgSrcfull, link, description, responsibilities, builtwith } =
           "header"
           "content"
           "footer";
-        @include bp(1000) {
+      }
+      @media (min-width: 1000px) {
+        .container-grid {
           grid-template-rows: 9vh 1fr 6vh;
-          display: grid;
         }
       }
 
       .main-container {
         margin-inline: auto;
         margin-block: auto;
-        @include bp(1200) {
+      }
+      @media (min-width: 1200px) {
+        .main-container {
           margin-right: -2rem;
           margin-left: -2rem;
         }
@@ -41,9 +43,9 @@ const { title, imgSrcfull, link, description, responsibilities, builtwith } =
     </style>
   </head>
   <body>
-    <div class="container-grid blur anim">
+    <div class="container-grid">
       <Header />
-      <MainEl class={MainClass}>
+      <MainEl class={MainClass} id="swup">
         <PortfolioDetails
           {title}
           {imgSrcfull}
@@ -54,13 +56,6 @@ const { title, imgSrcfull, link, description, responsibilities, builtwith } =
         />
       </MainEl>
       <Footer />
-      <script defer>
-        const animClass = document.querySelector(".anim");
-        window.addEventListener("load", function () {
-          if (animClass.classList.contains("blur"))
-            animClass.classList.remove("blur");
-        });
-      </script>
     </div>
   </body>
 </html>

@@ -1,17 +1,27 @@
 ---
 import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+}
+
 const {
   title = "Jech | Web Developer and designer",
   description = "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines",
-} = Astro.props;
+  canonicalURL = new URL(Astro.url.pathname, Astro.site),
+} = Astro.props as Props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 
 <meta name="description" content={description} />
+
+<!-- SEO -->
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Open Graph Tags (Facebook) -->
 <meta property="og:type" content="website" />
@@ -20,7 +30,6 @@ const {
 <meta property="og:description" content={description} />
 <meta property="og:image" content="/assets/og-cover.png" />
 
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/svg+xml" href="/assets/fav.svg" />
 <link rel="mask-icon" href="/assets/fav.svg" color="#16161d" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,7 +39,11 @@ const {
   href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@100&family=Rubik+Glitch&family=Roboto+Mono:wght@100;400&display=swap"
   rel="stylesheet"
 />
-
+<style>
+  a {
+    color: white;
+  }
+</style>
 <!-- Google Tag Manager -->
 <script is:inline>
   (function (w, d, s, l, i) {

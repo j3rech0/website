@@ -10,8 +10,7 @@ import Footer from "../components/Footer.astro";
       title="Jech | Web Developer and designer"
       description="My name is Jech and I'm a Freelance Web Developer and designer from the Philippines"
     />
-    <style lang="scss">
-      @import "../styles/mixin.scss";
+    <style is:inline>
       .container-grid {
         grid-template-areas:
           "header"
@@ -19,24 +18,19 @@ import Footer from "../components/Footer.astro";
           "footer";
         grid-template-columns: 1fr;
         grid-template-rows: 10vh 60vh calc(30vh - 4rem);
-        @include bp(1000) {
+      }
+      @media (min-width: 1000px) {
+        .container-grid {
           display: grid;
         }
       }
     </style>
   </head>
   <body>
-    <div class="container-grid blur anim">
+    <div class="container-grid">
       <Header />
       <slot />
       <Footer />
-      <script defer>
-        const animClass = document.querySelector(".anim");
-        window.addEventListener("load", function () {
-          if (animClass.classList.contains("blur"))
-            animClass.classList.remove("blur");
-        });
-      </script>
     </div>
   </body>
 </html>

@@ -4,26 +4,29 @@ import Link from "./Link.astro";
 import SocialMedia from "./SocialMedia.astro";
 ---
 
-<div class="splash-container">
+<div
+  class="splash-container swup-delay-anim"
+  style="animation-delay: var(--delay100);"
+>
   <div class="card-splash">
-    <h5
-      data-copy-sub={splash.frontmatter.slogan}
-      style="--shade: var(--c-gray);"
-    >
+    <h5 style="--shade: var(--c-gray); animation-delay: var(--delay200);">
       {splash.frontmatter.slogan}
     </h5>
-    <h1 data-copy={splash.frontmatter.title + " " + splash.frontmatter.name}>
+    <h1 class="swup-delay-anim" style="animation-delay: var(--delay300);">
       {splash.frontmatter.title}
       <span>{splash.frontmatter.name}</span>
     </h1>
-    <p data-copy-description={splash.frontmatter.description}>
+    <p class="swup-delay-anim" style="animation-delay: var(--delay400);">
       {splash.frontmatter.description}
     </p>
-    <div class="splash-links">
+    <div
+      class="splash-links swup-delay-anim"
+      style="animation-delay: var(--delay500);"
+    >
       <Link
         url="/work"
         text="View Portfolio"
-        className="cta"
+        className="cta animTrigger"
         title="View Portfolio"
       />
       <SocialMedia />
@@ -71,16 +74,6 @@ import SocialMedia from "./SocialMedia.astro";
       background-size: 70% rem(20);
       background-repeat: no-repeat;
       background-position: 0 calc(rem(20) / 5);
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   background: var(--shade, --defaultShadeColor);
-      //   width: 70%;
-      //   height: rem(16);
-      //   z-index: -1;
-      //   top: rem(16) - 0.7;
-      //   left: 0;
-      // }
     }
     > h1 {
       font-size: 7vw;
@@ -91,7 +84,7 @@ import SocialMedia from "./SocialMedia.astro";
       > span {
         color: var(--c-green);
       }
-      @include bp(600){
+      @include bp(600) {
         font-size: 5vw;
       }
       @include bp(1024) {
@@ -114,76 +107,6 @@ import SocialMedia from "./SocialMedia.astro";
         width: rem(510);
         font-size: rem(20);
       }
-    }
-
-    @include bp(1024) {
-      // .cta {
-      //   &::before {
-      //     content: "";
-      //     background: rgba(gray, 0.7);
-      //     width: 210px;
-      //     height: 21px;
-      //     border-radius: 50px;
-      //     filter: blur(10px) opacity(0.2);
-      //     bottom: -80px;
-      //     position: absolute;
-      //   }
-      // }
-      // [data-copy-sub] ,
-      // [data-copy],
-      // [data-copy-description] {
-      //   position: relative;
-      //   &::before {
-      //     pointer-events: none;
-      //     position: absolute;
-      //     filter: blur(1px) url("#turbulence") opacity(1);
-      //     transform: rotateX(135deg);
-      //   }
-      // }
-      // [data-copy] {
-      //   &::before {
-      //     content: attr(data-copy);
-      //     bottom: rem(-390);
-      //     white-space: nowrap;
-      //     padding-right: rem(20);
-      //     opacity: 0.1;
-      //   }
-      // }
-      // [data-copy-description] {
-      //   &::before {
-      //     content: attr(data-copy-description);
-      //     bottom: rem(-246);
-      //     opacity: 0.3;
-      //   }
-      // }
-      // [data-copy-sub] {
-      //   &::before {
-      //     content: attr(data-copy-sub);
-      //     filter: blur(1px) url("#turbulence");
-      //     opacity: 0.4;
-      //     bottom: rem(-103);
-      //     transform: rotateX(170deg) translateX(-11px);
-      //     white-space: nowrap;
-      //     padding-inline: 0.5rem;
-      //     @include bp(1024) {
-      //       bottom: rem(-144);
-      //     }
-      //     @include bp(1440) {
-      //       bottom: rem(-192);
-      //     }
-      //   }
-      // }
-      // [data-copy-description] {
-      //   &::before {
-      //     content: attr(data-copy-sub);
-      //     filter: blur(1px) url("#turbulence");
-      //     opacity: 0.4;
-      //     bottom: rem(-103);
-      //     transform: rotateX(170deg) translateX(-11px);
-      //     white-space: nowrap;
-      //     padding-inline: 0.5rem;
-      //   }
-      // }
     }
   }
 </style>

@@ -22,7 +22,7 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
 <div class="project-container">
   <header>
     <Link
-      className="flex-row-reverse"
+      className="flex-row-reverse animTrigger"
       url="/work"
       text="back to portfolio"
       title="back to portfolio"
@@ -30,27 +30,44 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
     />
   </header>
   <div class="project-main">
-    <div class="project-screenshot">
+    <div
+      class="project-screenshot swup-delay-anim"
+      style="animation-delay: var(--delay100)"
+    >
       <a href={link} target="_blank" rel="noopener noreferrer">
         <img src={imgSrcfull} alt="" width="493" />
       </a>
     </div>
-    <div class="project-details">
-      <header>
+    <div
+      class="project-details swup-delay-anim"
+      style="animation-delay: var(--delay200)"
+    >
+      <header class="swup-delay-anim" style="animation-delay: var(--delay300)">
         <h3>{title}</h3>
         <a href={link} target="_blank" rel="noopener noreferrer"
           ><img src="/assets/bx_link-alt.svg" alt="" width="17" />{link}
         </a>
       </header>
-      <div><p>{description}</p></div>
-      <div>
+      <div class="swup-delay-anim" style="animation-delay: var(--delay400)">
+        <p>{description}</p>
+      </div>
+      <div class="swup-delay-anim" style="animation-delay: var(--delay500)">
         <h5>Built With:</h5>
         <span>{builtwith}</span>
       </div>
-      <div>
+      <div class="swup-delay-anim" style="animation-delay: var(--delay600)">
         <h5>Responsibilities:</h5>
         <ul>
-          {responsibilities.map((r) => <li>{r}</li>)}
+          {
+            responsibilities.map((r, i) => (
+              <li
+                class="swup-delay-anim"
+                style={"animation-delay:" + (i += 5) + "00ms"}
+              >
+                {r}
+              </li>
+            ))
+          }
         </ul>
       </div>
     </div>

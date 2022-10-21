@@ -18,7 +18,7 @@
   --c-gray-200: #494949;
   --c-gray-300: #767687;
   --c-gray-400: #a1a1a1;
-  --c-gray-500: #8D8D8D;
+  --c-gray-500: #8d8d8d;
   --c-white: #e2f1f0;
   --c-youtube: #f00;
   --c-dribbble: #ea4c89;
@@ -52,7 +52,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 body {
@@ -111,13 +111,33 @@ ul {
   margin: 0;
   padding: 0;
 }
-
-.anim.blur .main-container{
-  filter: blur(5px) opacity(0);
-  transform: translate(0, -10px);
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
 }
-.anim .main-container{
-  filter: blur(0) opacity(1);
-  transform: translate(0, 0);
-  transition: transform 300ms, filter 300ms;
+html.is-rendering .main-container,
+html.is-changing .main-container,
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swup-delay-anim {
+  --delay100: 100ms;
+  --delay200: 200ms;
+  --delay300: 300ms;
+  --delay400: 400ms;
+  --delay500: 500ms;
+  --delay600: 600ms;
+  animation: anim 500ms forwards;
+  opacity: 0;
+  transform: translateY(-10px);
 }
