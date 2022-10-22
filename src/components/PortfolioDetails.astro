@@ -6,6 +6,7 @@ const icon = `<svg
               viewBox="0 0 44 44"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              class="svg-icon"
             >
               <g opacity="0.5">
                 <path
@@ -22,7 +23,7 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
 <div class="project-container">
   <header>
     <Link
-      className="flex-row-reverse animTrigger"
+      className="flex-row-reverse"
       url="/work"
       text="back to portfolio"
       title="back to portfolio"
@@ -78,17 +79,21 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
   @import "../styles/mixin.scss";
   .project {
     &-container {
-      max-width: rem(1040);
+      max-width: var(--w-full);
       margin-inline: auto;
       margin-block: rem(50);
       > header {
         margin-bottom: rem(50);
         a {
           color: var(--c-gray-500);
+         
           &:hover {
             color: white;
           }
         }
+      }
+      @include bp(1200) {
+        padding-top: rem(70);
       }
     }
     &-main {
@@ -124,7 +129,7 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
             background-image: linear-gradient(
               0deg,
               #16161d 10.94%,
-              rgba(27, 27, 27, 0) 60%
+              rgba(27, 27, 27, 0) 0%
             );
           }
         }

@@ -53,8 +53,8 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
       margin-top: rem(50);
       display: flex;
       flex-flow: row wrap;
-      column-gap: 4rem;
-      row-gap: 4rem;
+      column-gap: 2rem;
+      row-gap: 2rem;
       max-width: rem(940);
       img {
         display: block;
@@ -84,13 +84,17 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
           margin: auto;
           height: fit-content;
           width: fit-content;
-          font-size: rem(22);
+          font-size: rem(16);
+          text-align: center;
+          padding-inline: rem(20);
           filter: blur(5px) opacity(0);
+          @include bp(1024){
+            font-size: rem(20);
+          }
         }
         &:hover {
           &::after {
             filter: blur(0) opacity(1);
-            letter-spacing: 2px;
           }
           &::before {
             background: rgba(var(--c-black-gradient-1), 0.9);
@@ -98,19 +102,19 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
           }
         }
       }
-      @include bp(768) {
+      @include bp(515) {
         li {
           width: 45%;
         }
       }
+      @include bp(1024) {
+        column-gap: 4rem;
+        row-gap: 4rem;
+      }
     }
     @include bp(500) {
       margin-inline: auto;
-      max-width: rem(1040);
-    }
-    @include bp(1024) {
-      padding-bottom: rem(20);
-      padding-inline: rem(30);
+      max-width: var(--w-full);
     }
     @include bp(1200) {
       padding-top: rem(70);
