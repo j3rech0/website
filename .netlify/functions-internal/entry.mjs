@@ -1,6 +1,6 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import { escape } from 'html-escaper';
-/* empty css                        *//* empty css                             *//* empty css                                 *//* empty css                       *//* empty css                      */import 'mime';
+/* empty css                           *//* empty css                           *//* empty css                        *//* empty css                           *//* empty css                           *//* empty css                       *//* empty css                      */import 'mime';
 import 'kleur/colors';
 import 'string-width';
 import 'path-browserify';
@@ -1262,116 +1262,80 @@ var server_default = {
   renderToStaticMarkup
 };
 
-const $$metadata$h = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Footer.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$h = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Footer.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$h, $$props, $$slots);
-  Astro2.self = $$Footer;
-  const { footerClass } = Astro2.props;
-  const imgSrc = "assets/footer-dots.svg";
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<footer${addAttribute((footerClass ? footerClass : "footer") + " astro-5NAYDS26", "class")}${addAttribute("background-image: url(" + imgSrc + ")", "style")}>
-  <!-- <SocialMedia /> -->
-</footer>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TV8NVWT" height="0" width="0" style="display:none;visibility:hidden" class="astro-5NAYDS26"></iframe>
-</noscript>
-
-<!-- End Google Tag Manager (noscript) -->
-<!-- To do's -->
-<!-- Add work experiences -->
-<!-- Add animation -->
-<!-- Add UI framework? -->
-<!-- https://www.youtube.com/watch?v=T33NN_pPeNI -->
-<!-- https://css-tricks.com/svg-line-animation-works/ -->
-
-`;
-});
-
-const $$file$h = "C:/Project/astro/jerecho/src/components/Footer.astro";
-const $$url$h = undefined;
-
-const $$module1$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  $$metadata: $$metadata$h,
-  default: $$Footer,
-  file: $$file$h,
-  url: $$url$h
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var __freeze$2 = Object.freeze;
-var __defProp$2 = Object.defineProperty;
-var __template$2 = (cooked, raw) => __freeze$2(__defProp$2(cooked, "raw", { value: __freeze$2(raw || cooked.slice()) }));
-var _a$2;
-const $$metadata$g = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/MetaHead.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$g = createAstro("/@fs/C:/Project/astro/jerecho/src/components/MetaHead.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+var __freeze = Object.freeze;
+var __defProp = Object.defineProperty;
+var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
+var _a;
+const $$metadata$i = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/MetaHead.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$j = createAstro("/@fs/C:/Project/astro/jerecho/src/components/MetaHead.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$MetaHead = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$j, $$props, $$slots);
   Astro2.self = $$MetaHead;
   const {
     title = "Jech | Web Developer and designer",
-    description = "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines"
+    description = "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines",
+    canonicalURL = new URL(Astro2.url.pathname, Astro2.site)
   } = Astro2.props;
-  return renderTemplate(_a$2 || (_a$2 = __template$2(['<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width">\n<meta name="generator"', ">\n<title>", '</title>\n\n<meta name="description"', '>\n\n<!-- Open Graph Tags (Facebook) -->\n<meta property="og:type" content="website">\n<meta property="og:title"', '>\n<meta property="og:url" content="https://jerecho.com">\n<meta property="og:description"', '>\n<meta property="og:image" content="assets/og-cover.png">\n\n<link rel="icon" type="image/svg+xml" href="assets/fav.svg">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n\n<link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@100&family=Rubik+Glitch&family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">\n\n<!-- Google Tag Manager -->\n<script>\n  (function (w, d, s, l, i) {\n    w[l] = w[l] || [];\n    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });\n    var f = d.getElementsByTagName(s)[0],\n      j = d.createElement(s),\n      dl = l != "dataLayer" ? "&l=" + l : "";\n    j.async = true;\n    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;\n    f.parentNode.insertBefore(j, f);\n  })(window, document, "script", "dataLayer", "GTM-TV8NVWT");\n<\/script>\n<!-- End Google Tag Manager -->\n'])), addAttribute(Astro2.generator, "content"), title, addAttribute(description, "content"), addAttribute(title, "content"), addAttribute(description, "content"));
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate(_a || (_a = __template(['<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width">\n<title>', '</title>\n\n<meta name="description"', '>\n\n<!-- SEO -->\n<link rel="canonical"', '>\n\n<!-- Open Graph Tags (Facebook) -->\n<meta property="og:type" content="website">\n<meta property="og:title"', '>\n<meta property="og:url" content="https://jerecho.com">\n<meta property="og:description"', '>\n<meta property="og:image" content="/assets/og-cover.png">\n\n<link rel="icon" type="image/svg+xml" href="/assets/fav.svg">\n<link rel="mask-icon" href="/assets/fav.svg" color="#16161d">\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n\n<link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@100&family=Rubik+Glitch&family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet">\n\n<!-- Google Tag Manager -->\n<script>\n  (function (w, d, s, l, i) {\n    w[l] = w[l] || [];\n    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });\n    var f = d.getElementsByTagName(s)[0],\n      j = d.createElement(s),\n      dl = l != "dataLayer" ? "&l=" + l : "";\n    j.async = true;\n    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;\n    f.parentNode.insertBefore(j, f);\n  })(window, document, "script", "dataLayer", "GTM-TV8NVWT");\n<\/script>\n<!-- End Google Tag Manager -->\n'])), title, addAttribute(description, "content"), addAttribute(canonicalURL, "href"), addAttribute(title, "content"), addAttribute(description, "content"));
 });
 
-const $$file$g = "C:/Project/astro/jerecho/src/components/MetaHead.astro";
-const $$url$g = undefined;
+const $$file$i = "C:/Project/astro/jerecho/src/components/MetaHead.astro";
+const $$url$i = undefined;
 
-const $$module1$6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module2$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$g,
+  $$metadata: $$metadata$i,
   default: $$MetaHead,
-  file: $$file$g,
-  url: $$url$g
+  file: $$file$i,
+  url: $$url$i
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$f = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Nav.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$f = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Nav.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$h = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Nav.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$i = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Nav.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Nav = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$i, $$props, $$slots);
   Astro2.self = $$Nav;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<nav class="navigation astro-5XGTLM6P">
-  <a class="link astro-5XGTLM6P" href="/" title="Hi">
-    <div class="logo astro-5XGTLM6P">
-      <svg width="32" height="50" viewBox="0 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="astro-5XGTLM6P">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5797 5.7971C24.5797 5.87476 24.5782 5.95205 24.5751 6.02897H24.5797V43.3623V43.5942H24.5751C24.4534 46.6884 21.9066 49.1594 18.7826 49.1594C15.6586 49.1594 13.1117 46.6884 12.99 43.5942H12.9855V43.3623V6.02897H12.99C12.987 5.95205 12.9855 5.87476 12.9855 5.7971C12.9855 2.59545 15.5809 0 18.7826 0C21.9842 0 24.5797 2.59545 24.5797 5.7971ZM30.302 7.26316C29.2149 6.17599 27.7404 5.56523 26.2029 5.56523V11.3623L26.2029 17.1594C27.7404 17.1594 29.2149 16.5487 30.302 15.4615C31.3892 14.3743 32 12.8998 32 11.3623C32 9.82484 31.3892 8.35033 30.302 7.26316ZM11.5897 30.1449C11.5927 30.068 11.5942 29.9907 11.5942 29.9131C11.5942 26.7114 8.99875 24.116 5.7971 24.116C2.59545 24.116 0 26.7114 0 29.9131C0 29.9907 0.00152685 30.068 0.00455217 30.1449H0V37.1015H0.0413096C0.0140335 37.3295 0 37.5617 0 37.7971C0 40.9988 2.59545 43.5942 5.7971 43.5942C8.99875 43.5942 11.5942 40.9988 11.5942 37.7971C11.5942 37.5617 11.5802 37.3295 11.5529 37.1015H11.5942V30.1449H11.5897Z" fill="url(#paint0_linear_952_12)" class="astro-5XGTLM6P"></path>
-        <defs class="astro-5XGTLM6P">
-          <linearGradient id="paint0_linear_952_12" x1="27.2" y1="-1.06667" x2="1.6" y2="49.0667" gradientUnits="userSpaceOnUse" class="astro-5XGTLM6P">
-            <stop stop-color="white" class="astro-5XGTLM6P"></stop>
-            <stop offset="1" stop-color="white" class="astro-5XGTLM6P"></stop>
+  return renderTemplate`${maybeRenderHead($$result)}<nav class="navigation astro-LTGA53L3">
+  <a class="link animTrigger astro-LTGA53L3" href="/" title="Hi">
+    <div class="logo astro-LTGA53L3">
+      <svg width="32" height="50" viewBox="0 0 32 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="astro-LTGA53L3">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5797 5.7971C24.5797 5.87476 24.5782 5.95205 24.5751 6.02897H24.5797V43.3623V43.5942H24.5751C24.4534 46.6884 21.9066 49.1594 18.7826 49.1594C15.6586 49.1594 13.1117 46.6884 12.99 43.5942H12.9855V43.3623V6.02897H12.99C12.987 5.95205 12.9855 5.87476 12.9855 5.7971C12.9855 2.59545 15.5809 0 18.7826 0C21.9842 0 24.5797 2.59545 24.5797 5.7971ZM30.302 7.26316C29.2149 6.17599 27.7404 5.56523 26.2029 5.56523V11.3623L26.2029 17.1594C27.7404 17.1594 29.2149 16.5487 30.302 15.4615C31.3892 14.3743 32 12.8998 32 11.3623C32 9.82484 31.3892 8.35033 30.302 7.26316ZM11.5897 30.1449C11.5927 30.068 11.5942 29.9907 11.5942 29.9131C11.5942 26.7114 8.99875 24.116 5.7971 24.116C2.59545 24.116 0 26.7114 0 29.9131C0 29.9907 0.00152685 30.068 0.00455217 30.1449H0V37.1015H0.0413096C0.0140335 37.3295 0 37.5617 0 37.7971C0 40.9988 2.59545 43.5942 5.7971 43.5942C8.99875 43.5942 11.5942 40.9988 11.5942 37.7971C11.5942 37.5617 11.5802 37.3295 11.5529 37.1015H11.5942V30.1449H11.5897Z" fill="url(#paint0_linear_952_12)" class="astro-LTGA53L3"></path>
+        <defs class="astro-LTGA53L3">
+          <linearGradient id="paint0_linear_952_12" x1="27.2" y1="-1.06667" x2="1.6" y2="49.0667" gradientUnits="userSpaceOnUse" class="astro-LTGA53L3">
+            <stop stop-color="white" class="astro-LTGA53L3"></stop>
+            <stop offset="1" stop-color="white" class="astro-LTGA53L3"></stop>
           </linearGradient>
         </defs>
       </svg>
     </div>
   </a>
-  <a href="mailto:subs373n@gmail.com?subject=Hi" class="astro-5XGTLM6P">Contact</a>
+  <a href="mailto:subs373n@gmail.com?subject=Hi" class="astro-LTGA53L3">Contact</a>
 </nav>
 
 `;
 });
 
-const $$file$f = "C:/Project/astro/jerecho/src/components/Nav.astro";
-const $$url$f = undefined;
+const $$file$h = "C:/Project/astro/jerecho/src/components/Nav.astro";
+const $$url$h = undefined;
 
-const $$module2$4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$f,
+  $$metadata: $$metadata$h,
   default: $$Nav,
-  file: $$file$f,
-  url: $$url$f
+  file: $$file$h,
+  url: $$url$h
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$e = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Header.astro", { modules: [{ module: $$module2$4, specifier: "./Nav.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$e = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Header.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$g = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Header.astro", { modules: [{ module: $$module1$8, specifier: "./Nav.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$h = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Header.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Header = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$h, $$props, $$slots);
   Astro2.self = $$Header;
   const STYLES = [];
   for (const STYLE of STYLES)
@@ -1383,71 +1347,108 @@ const $$Header = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$e = "C:/Project/astro/jerecho/src/components/Header.astro";
-const $$url$e = undefined;
+const $$file$g = "C:/Project/astro/jerecho/src/components/Header.astro";
+const $$url$g = undefined;
 
-const $$module3$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$e,
+  $$metadata: $$metadata$g,
   default: $$Header,
-  file: $$file$e,
-  url: $$url$e
+  file: $$file$g,
+  url: $$url$g
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$d = createMetadata("/@fs/C:/Project/astro/jerecho/src/layouts/Splash.astro", { modules: [{ module: $$module1$7, specifier: "../components/Footer.astro", assert: {} }, { module: $$module1$6, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module3$1, specifier: "../components/Header.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$d = createAstro("/@fs/C:/Project/astro/jerecho/src/layouts/Splash.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$Splash = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
-  Astro2.self = $$Splash;
+const $$metadata$f = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Footer.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$g = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Footer.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$Footer = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$g, $$props, $$slots);
+  Astro2.self = $$Footer;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<html lang="en" class="astro-OSETKEJJ">
+  return renderTemplate`${maybeRenderHead($$result)}<footer class="astro-QEDG3PI7">
+  <small class="astro-QEDG3PI7">Design and develop by Jech</small>
+</footer>
+
+`;
+});
+
+const $$file$f = "C:/Project/astro/jerecho/src/components/Footer.astro";
+const $$url$f = undefined;
+
+const $$module3$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$f,
+  default: $$Footer,
+  file: $$file$f,
+  url: $$url$f
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$e = createMetadata("/@fs/C:/Project/astro/jerecho/src/layouts/Splash.astro", { modules: [{ module: $$module2$3, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module1$7, specifier: "../components/Header.astro", assert: {} }, { module: $$module3$1, specifier: "../components/Footer.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$f = createAstro("/@fs/C:/Project/astro/jerecho/src/layouts/Splash.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$Splash = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$f, $$props, $$slots);
+  Astro2.self = $$Splash;
+  return renderTemplate`<html lang="en">
   <head>
-    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Web Developer and designer", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines", "class": "astro-OSETKEJJ" })}
-    
+    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Web Developer and designer", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines" })}
+    <style>
+      .container-grid {
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 10vh 60vh calc(30vh - 4rem);
+      }
+      @media (min-width: 1000px) {
+        .container-grid {
+          display: grid;
+        }
+      }
+    </style>
   ${renderHead($$result)}</head>
-  <body class="blur astro-OSETKEJJ">
-    <div class="container-grid astro-OSETKEJJ">
-      ${renderComponent($$result, "Header", $$Header, { "class": "astro-OSETKEJJ" })}
+  <body>
+    <div class="container-grid">
+      ${renderComponent($$result, "Header", $$Header, {})}
       ${renderSlot($$result, $$slots["default"])}
-      ${renderComponent($$result, "Footer", $$Footer, { "class": "astro-OSETKEJJ" })}
+      ${renderComponent($$result, "Footer", $$Footer, {})}
     </div>
   </body></html>`;
 });
 
-const $$file$d = "C:/Project/astro/jerecho/src/layouts/Splash.astro";
-const $$url$d = undefined;
+const $$file$e = "C:/Project/astro/jerecho/src/layouts/Splash.astro";
+const $$url$e = undefined;
 
-const $$module1$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$d,
+  $$metadata: $$metadata$e,
   default: $$Splash,
-  file: $$file$d,
-  url: $$url$d
+  file: $$file$e,
+  url: $$url$e
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const html$1 = "";
+const html$8 = "";
 
-				const frontmatter$1 = {"title":"Hi, my name is","name":"Jech","slogan":"Web Developer","description":"I’m a seasoned web developer with agile methodology background and over 10 years industry experience."};
-				const file$1 = "C:/Project/astro/jerecho/src/pages/home/intro.md";
-				const url$1 = "/home/intro";
-				function rawContent$1() {
+				const frontmatter$8 = {"title":"Hi, my name is","name":"Jech","slogan":"Web Developer","description":"I’m a seasoned web developer with agile methodology background and over 10 years industry experience."};
+				const file$8 = "C:/Project/astro/jerecho/src/pages/home/intro.md";
+				const url$8 = "/home/intro";
+				function rawContent$8() {
 					return "";
 				}
-				function compiledContent$1() {
-					return html$1;
+				function compiledContent$8() {
+					return html$8;
 				}
-				function getHeadings$1() {
+				function getHeadings$8() {
 					return [];
 				}
-				function getHeaders$1() {
+				function getHeaders$8() {
 					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
-					return getHeadings$1();
-				}				async function Content$1() {
-					const { layout, ...content } = frontmatter$1;
-					content.file = file$1;
-					content.url = url$1;
+					return getHeadings$8();
+				}				async function Content$8() {
+					const { layout, ...content } = frontmatter$8;
+					content.file = file$8;
+					content.url = url$8;
 					content.astro = {};
 					Object.defineProperty(content.astro, 'headings', {
 						get() {
@@ -1464,74 +1465,55 @@ const html$1 = "";
 							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
 						}
 					});
-					const contentFragment = createVNode(Fragment, { 'set:html': html$1 });
+					const contentFragment = createVNode(Fragment, { 'set:html': html$8 });
 					return contentFragment;
 				}
-				Content$1[Symbol.for('astro.needsHeadRendering')] = true;
+				Content$8[Symbol.for('astro.needsHeadRendering')] = true;
 
 const _page1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  frontmatter: frontmatter$1,
-  file: file$1,
-  url: url$1,
-  rawContent: rawContent$1,
-  compiledContent: compiledContent$1,
-  getHeadings: getHeadings$1,
-  getHeaders: getHeaders$1,
-  Content: Content$1,
-  default: Content$1
+  frontmatter: frontmatter$8,
+  file: file$8,
+  url: url$8,
+  rawContent: rawContent$8,
+  compiledContent: compiledContent$8,
+  getHeadings: getHeadings$8,
+  getHeaders: getHeaders$8,
+  Content: Content$8,
+  default: Content$8
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$c = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Link.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$c = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Link.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$d = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Link.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$e = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Link.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Link = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$e, $$props, $$slots);
   Astro2.self = $$Link;
   const { text, className, url, title, hasIcon } = Astro2.props;
-  const icon = `<svg
-        width="18"
-        height="16"
-        viewBox="0 0 18 16"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="svg"
-      >
-        <path
-          d="M1 8H17M10 1L17 8L10 15"
-          stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>`;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url || "/", "href")}${addAttribute((className && className + " flex") + " astro-MD2LI5PC", "class")}${addAttribute(title, "title")}>${text}
-
-  ${hasIcon ? renderTemplate`<div class="svg astro-MD2LI5PC">
-        ${renderComponent($$result, "Fragment", Fragment, {}, { "default": () => renderTemplate`${unescapeHTML(icon)}` })}
-      </div>` : ""}
+  return renderTemplate`${maybeRenderHead($$result)}<a${addAttribute(url || "/", "href")}${addAttribute((className ? className + " flex" : "") + " astro-EFI5C4MJ", "class")}${addAttribute(title, "title")}>${text}
+  ${renderTemplate`${renderComponent($$result, "Fragment", Fragment, {}, { "default": () => renderTemplate`${unescapeHTML(hasIcon ? hasIcon : "")}` })}`}
 </a>
 
 `;
 });
 
-const $$file$c = "C:/Project/astro/jerecho/src/components/Link.astro";
-const $$url$c = undefined;
+const $$file$d = "C:/Project/astro/jerecho/src/components/Link.astro";
+const $$url$d = undefined;
 
-const $$module2$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const $$module1$5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$c,
+  $$metadata: $$metadata$d,
   default: $$Link,
-  file: $$file$c,
-  url: $$url$c
+  file: $$file$d,
+  url: $$url$d
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$b = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/SocialList.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$b = createAstro("/@fs/C:/Project/astro/jerecho/src/components/SocialList.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$c = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/SocialList.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$d = createAstro("/@fs/C:/Project/astro/jerecho/src/components/SocialList.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$SocialList = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$SocialList;
   const { title, url, classes, svg, target } = Astro2.props;
   const svgHover = `<path d="M19.6962 9.7904C17.8868 9.7904 10.1157 14.858 7.94052 20.3562C7.32025 23.1401 6.6786 24.8467 6.6786 27.7423C6.6786 28.9962 7.3682 31.0058 7.94052 32.1475C8.64 33.5428 9.17694 35.089 10.1157 36.3374C11.6672 38.4007 13.9604 40.3166 16.2426 41.4546C22.1509 44.4011 28.0788 44.7771 34.7229 42.6471C38.0373 41.5845 40.8297 40.2029 43.1412 37.5132C45.0312 35.314 48.3881 30.6767 48.3881 27.7423C48.3881 24.7074 48.8198 23.5621 48.8198 20.3562C48.8198 18.7295 49.4365 15.1587 48.3881 13.9637C48.193 13.7413 47.7314 12.6233 47.6409 12.3076C47.4516 11.6467 46.7287 11.2692 46.3624 10.6847C45.7221 9.66293 44.5815 8.79901 43.9714 7.70374C43.4543 6.77539 41.8747 5.27744 40.9163 5.00433C38.4497 4.30143 36.3159 1.8936 33.5773 1.74185C31.7417 1.64014 30.0382 1.14566 28.1975 1.14566C27.0419 1.14566 24.8757 0.734031 23.8639 1.29471C22.7188 1.92922 20.9362 1.40506 19.6962 1.75841C18.4133 2.12402 16.6258 2.13505 15.3459 2.70238C10.449 4.87311 5.66679 6.99763 1 9.7904" stroke="#8D8D8D" stroke-width="2" stroke-linecap="round"/>`;
@@ -1547,21 +1529,21 @@ const $$SocialList = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$b = "C:/Project/astro/jerecho/src/components/SocialList.astro";
-const $$url$b = undefined;
+const $$file$c = "C:/Project/astro/jerecho/src/components/SocialList.astro";
+const $$url$c = undefined;
 
 const $$module1$4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$b,
+  $$metadata: $$metadata$c,
   default: $$SocialList,
-  file: $$file$b,
-  url: $$url$b
+  file: $$file$c,
+  url: $$url$c
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$a = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/SocialMedia.astro", { modules: [{ module: $$module1$4, specifier: "./SocialList.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$a = createAstro("/@fs/C:/Project/astro/jerecho/src/components/SocialMedia.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$b = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/SocialMedia.astro", { modules: [{ module: $$module1$4, specifier: "./SocialList.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$c = createAstro("/@fs/C:/Project/astro/jerecho/src/components/SocialMedia.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$SocialMedia = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$c, $$props, $$slots);
   Astro2.self = $$SocialMedia;
   const socialMedia = [
     {
@@ -1619,40 +1601,40 @@ const $$SocialMedia = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$a = "C:/Project/astro/jerecho/src/components/SocialMedia.astro";
-const $$url$a = undefined;
+const $$file$b = "C:/Project/astro/jerecho/src/components/SocialMedia.astro";
+const $$url$b = undefined;
 
 const $$module3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$a,
+  $$metadata: $$metadata$b,
   default: $$SocialMedia,
-  file: $$file$a,
-  url: $$url$a
+  file: $$file$b,
+  url: $$url$b
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$9 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Intro.astro", { modules: [{ module: _page1, specifier: "../pages/home/intro.md", assert: {} }, { module: $$module2$3, specifier: "./Link.astro", assert: {} }, { module: $$module3, specifier: "./SocialMedia.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$9 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Intro.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$a = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Intro.astro", { modules: [{ module: _page1, specifier: "../pages/home/intro.md", assert: {} }, { module: $$module1$5, specifier: "./Link.astro", assert: {} }, { module: $$module3, specifier: "./SocialMedia.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$b = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Intro.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Intro = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  const Astro2 = $$result.createAstro($$Astro$b, $$props, $$slots);
   Astro2.self = $$Intro;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="splash-container astro-DNHY5HEH">
-  <div class="card-splash astro-DNHY5HEH">
-    <h5${addAttribute(frontmatter$1.slogan, "data-copy-sub")} style="--shade: var(--c-gray);" class="astro-DNHY5HEH">
-      ${frontmatter$1.slogan}
+  return renderTemplate`${maybeRenderHead($$result)}<div class="splash-container swup-delay-anim astro-JMN7LE4A" style="animation-delay: var(--delay100);">
+  <div class="card-splash astro-JMN7LE4A">
+    <h5 style="--shade: var(--c-gray); animation-delay: var(--delay200);" class="astro-JMN7LE4A">
+      ${frontmatter$8.slogan}
     </h5>
-    <h1${addAttribute(frontmatter$1.title + " " + frontmatter$1.name, "data-copy")} class="astro-DNHY5HEH">
-      ${frontmatter$1.title}
-      <span class="astro-DNHY5HEH">${frontmatter$1.name}</span>
+    <h1 class="swup-delay-anim astro-JMN7LE4A" style="animation-delay: var(--delay300);">
+      ${frontmatter$8.title}
+      <span class="astro-JMN7LE4A">${frontmatter$8.name}</span>
     </h1>
-    <p${addAttribute(frontmatter$1.description, "data-copy-description")} class="astro-DNHY5HEH">
-      ${frontmatter$1.description}
+    <p class="swup-delay-anim astro-JMN7LE4A" style="animation-delay: var(--delay400);">
+      ${frontmatter$8.description}
     </p>
-    <div class="splash-links astro-DNHY5HEH">
-      ${renderComponent($$result, "Link", $$Link, { "url": "/work", "text": "View Portfolio", "className": "cta astro-DNHY5HEH", "title": "View Portfolio" })}
-      ${renderComponent($$result, "SocialMedia", $$SocialMedia, { "class": "astro-DNHY5HEH" })}
+    <div class="splash-links swup-delay-anim astro-JMN7LE4A" style="animation-delay: var(--delay500);">
+      ${renderComponent($$result, "Link", $$Link, { "url": "/work", "text": "View Portfolio", "className": "cta animTrigger astro-JMN7LE4A", "title": "View Portfolio" })}
+      ${renderComponent($$result, "SocialMedia", $$SocialMedia, { "class": "astro-JMN7LE4A" })}
     </div>
   </div>
 </div>
@@ -1660,24 +1642,687 @@ const $$Intro = createComponent(async ($$result, $$props, $$slots) => {
 `;
 });
 
-const $$file$9 = "C:/Project/astro/jerecho/src/components/Intro.astro";
-const $$url$9 = undefined;
+const $$file$a = "C:/Project/astro/jerecho/src/components/Intro.astro";
+const $$url$a = undefined;
 
 const $$module1$3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
-  $$metadata: $$metadata$9,
+  $$metadata: $$metadata$a,
   default: $$Intro,
+  file: $$file$a,
+  url: $$url$a
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$9 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Me.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$a = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Me.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$Me = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$a, $$props, $$slots);
+  Astro2.self = $$Me;
+  const me = "./assets/me.svg";
+  const mepng = "./assets/me.png";
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<div class="me-image swup-delay-anim astro-BRJRTZQW" style="animation-delay: var(--delay400)">
+  <img${addAttribute(me, "src")} alt="Me" class="me astro-BRJRTZQW" width="317">
+  <img${addAttribute(mepng, "src")} alt="Jech" class="me-png astro-BRJRTZQW" width="317">
+</div>
+
+`;
+});
+
+const $$file$9 = "C:/Project/astro/jerecho/src/components/Me.astro";
+const $$url$9 = undefined;
+
+const $$module2$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$9,
+  default: $$Me,
   file: $$file$9,
   url: $$url$9
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const html = "<img src=\"assets/dots.svg\" width=\"525\">";
+const $$metadata$8 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/TopFold.astro", { modules: [{ module: $$module1$3, specifier: "../components/Intro.astro", assert: {} }, { module: $$module2$2, specifier: "./Me.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$9 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/TopFold.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$TopFold = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$9, $$props, $$slots);
+  Astro2.self = $$TopFold;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<section class="top-fold astro-2SJA6AAV">
+  ${renderComponent($$result, "Intro", $$Intro, { "class": "astro-2SJA6AAV" })}
+  ${renderComponent($$result, "Me", $$Me, { "class": "astro-2SJA6AAV" })}
+</section>
 
-				const frontmatter = {"me":"assets/me.svg"};
-				const file = "C:/Project/astro/jerecho/src/pages/home/me.md";
-				const url = "/home/me";
+`;
+});
+
+const $$file$8 = "C:/Project/astro/jerecho/src/components/TopFold.astro";
+const $$url$8 = undefined;
+
+const $$module1$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$8,
+  default: $$TopFold,
+  file: $$file$8,
+  url: $$url$8
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$7 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/MainContainer.astro", { modules: [{ module: $$module1$2, specifier: "./TopFold.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$8 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/MainContainer.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$MainContainer = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
+  Astro2.self = $$MainContainer;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<main class="main-container transition-fade astro-KGJIGXIL" id="swup">
+  ${renderComponent($$result, "TopFold", $$TopFold, { "class": "astro-KGJIGXIL" })}
+</main>
+
+`;
+});
+
+const $$file$7 = "C:/Project/astro/jerecho/src/components/MainContainer.astro";
+const $$url$7 = undefined;
+
+const $$module2$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$7,
+  default: $$MainContainer,
+  file: $$file$7,
+  url: $$url$7
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$6 = createMetadata("/@fs/C:/Project/astro/jerecho/src/pages/index.astro", { modules: [{ module: $$module1$6, specifier: "../layouts/Splash.astro", assert: {} }, { module: $$module2$1, specifier: "../components/MainContainer.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$7 = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/index.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$Index = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
+  Astro2.self = $$Index;
+  return renderTemplate`${renderComponent($$result, "Splash", $$Splash, {}, { "default": () => renderTemplate`${renderComponent($$result, "Main", $$MainContainer, {})}` })}`;
+});
+
+const $$file$6 = "C:/Project/astro/jerecho/src/pages/index.astro";
+const $$url$6 = "";
+
+const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$6,
+  default: $$Index,
+  file: $$file$6,
+  url: $$url$6
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$7 = "";
+
+				const frontmatter$7 = {"title":"Featured project.","description":"Some of the recent projects I've worked with.","description2":"Most of my contributions were mainly focused on UI / UX development, responsive web design and CMS driven websites."};
+				const file$7 = "C:/Project/astro/jerecho/src/pages/home/work.md";
+				const url$7 = "/home/work";
+				function rawContent$7() {
+					return "";
+				}
+				function compiledContent$7() {
+					return html$7;
+				}
+				function getHeadings$7() {
+					return [];
+				}
+				function getHeaders$7() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$7();
+				}				async function Content$7() {
+					const { layout, ...content } = frontmatter$7;
+					content.file = file$7;
+					content.url = url$7;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$7 });
+					return contentFragment;
+				}
+				Content$7[Symbol.for('astro.needsHeadRendering')] = true;
+
+const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$7,
+  file: file$7,
+  url: url$7,
+  rawContent: rawContent$7,
+  compiledContent: compiledContent$7,
+  getHeadings: getHeadings$7,
+  getHeaders: getHeaders$7,
+  Content: Content$7,
+  default: Content$7
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const $$metadata$5 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/PortfolioDetails.astro", { modules: [{ module: $$module1$5, specifier: "./Link.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$6 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/PortfolioDetails.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$PortfolioDetails = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
+  Astro2.self = $$PortfolioDetails;
+  const icon = `<svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="svg-icon"
+            >
+              <g opacity="0.5">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M33 22C33 22.3647 32.8551 22.7144 32.5973 22.9723C32.3394 23.2302 31.9897 23.375 31.625 23.375H15.6943L21.5985 29.2765C21.7263 29.4044 21.8278 29.5561 21.8969 29.7232C21.9661 29.8902 22.0017 30.0692 22.0017 30.25C22.0017 30.4308 21.9661 30.6098 21.8969 30.7769C21.8278 30.9439 21.7263 31.0957 21.5985 31.2235C21.4707 31.3514 21.3189 31.4528 21.1519 31.522C20.9848 31.5912 20.8058 31.6268 20.625 31.6268C20.4442 31.6268 20.2652 31.5912 20.0981 31.522C19.9311 31.4528 19.7793 31.3514 19.6515 31.2235L11.4015 22.9735C11.2735 22.8458 11.1719 22.6941 11.1025 22.527C11.0332 22.36 10.9975 22.1809 10.9975 22C10.9975 21.8192 11.0332 21.6401 11.1025 21.473C11.1719 21.306 11.2735 21.1543 11.4015 21.0265L19.6515 12.7765C19.9097 12.5183 20.2599 12.3733 20.625 12.3733C20.9901 12.3733 21.3403 12.5183 21.5985 12.7765C21.8567 13.0347 22.0017 13.3849 22.0017 13.75C22.0017 14.1152 21.8567 14.4653 21.5985 14.7235L15.6943 20.625H31.625C31.9897 20.625 32.3394 20.7699 32.5973 21.0278C32.8551 21.2856 33 21.6354 33 22Z"
+                  fill="white"></path>
+              </g>
+            </svg>`;
+  const { responsibilities, title, imgSrcfull, link, description, builtwith } = Astro2.props;
+  const STYLES = [];
+  for (const STYLE of STYLES)
+    $$result.styles.add(STYLE);
+  return renderTemplate`${maybeRenderHead($$result)}<div class="project-container astro-VBWPFBS6">
+  <header class="astro-VBWPFBS6">
+    ${renderComponent($$result, "Link", $$Link, { "className": "flex-row-reverse astro-VBWPFBS6", "url": "/work", "text": "back to portfolio", "title": "back to portfolio", "hasIcon": icon })}
+  </header>
+  <div class="project-main astro-VBWPFBS6">
+    <div class="project-screenshot swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay100)">
+      <a${addAttribute(link, "href")} target="_blank" rel="noopener noreferrer" class="astro-VBWPFBS6">
+        <img${addAttribute(imgSrcfull, "src")} alt="" width="493" class="astro-VBWPFBS6">
+      </a>
+    </div>
+    <div class="project-details swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay200)">
+      <header class="swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay300)">
+        <h3 class="astro-VBWPFBS6">${title}</h3>
+        <a${addAttribute(link, "href")} target="_blank" rel="noopener noreferrer" class="astro-VBWPFBS6"><img src="/assets/bx_link-alt.svg" alt="" width="17" class="astro-VBWPFBS6">${link}
+        </a>
+      </header>
+      <div class="swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay400)">
+        <p class="astro-VBWPFBS6">${description}</p>
+      </div>
+      <div class="swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay500)">
+        <h5 class="astro-VBWPFBS6">Built With:</h5>
+        <span class="astro-VBWPFBS6">${builtwith}</span>
+      </div>
+      <div class="swup-delay-anim astro-VBWPFBS6" style="animation-delay: var(--delay600)">
+        <h5 class="astro-VBWPFBS6">Responsibilities:</h5>
+        <ul class="astro-VBWPFBS6">
+          ${responsibilities.map((r, i) => renderTemplate`<li class="swup-delay-anim astro-VBWPFBS6"${addAttribute("animation-delay:" + (i += 5) + "00ms", "style")}>
+                ${r}
+              </li>`)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+`;
+});
+
+const $$file$5 = "C:/Project/astro/jerecho/src/components/PortfolioDetails.astro";
+const $$url$5 = undefined;
+
+const $$module4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  $$metadata: $$metadata$5,
+  default: $$PortfolioDetails,
+  file: $$file$5,
+  url: $$url$5
+}, Symbol.toStringTag, { value: 'Module' }));
+
+createMetadata("/@fs/C:/Project/astro/jerecho/src/layouts/Work.astro", { modules: [{ module: $$module2$3, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module1$7, specifier: "../components/Header.astro", assert: {} }, { module: $$module3$1, specifier: "../components/Footer.astro", assert: {} }, { module: $$module4, specifier: "../components/PortfolioDetails.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$5 = createAstro("/@fs/C:/Project/astro/jerecho/src/layouts/Work.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
+const $$Work$1 = createComponent(async ($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
+  Astro2.self = $$Work$1;
+  const MainEl = "main";
+  const MainClass = "main-container transition-fade";
+  const { title, imgSrcfull, link, description, responsibilities, builtwith } = Astro2.props.frontmatter || Astro2.props;
+  return renderTemplate`<html lang="en">
+  <head>
+    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Portfolio", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines" })}
+    <style>
+      .container-grid {
+        display: grid;
+        height: calc(100vh - var(--m-medium) * 2);
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+      }
+      @media (min-width: 1000px) {
+        .container-grid {
+          grid-template-rows: 9vh 1fr 6vh;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .main-container {
+          margin-right: -2rem;
+          margin-left: -2rem;
+        }
+      }
+    </style>
+  ${renderHead($$result)}</head>
+  <body>
+    <div class="container-grid">
+      ${renderComponent($$result, "Header", $$Header, {})}
+      ${renderComponent($$result, "MainEl", MainEl, { "class": MainClass, "id": "swup" }, { "default": () => renderTemplate`${renderComponent($$result, "PortfolioDetails", $$PortfolioDetails, { "title": title, "imgSrcfull": imgSrcfull, "link": link, "description": description, "responsibilities": responsibilities, "builtwith": builtwith })}` })}
+      ${renderComponent($$result, "Footer", $$Footer, {})}
+    </div>
+  </body></html>`;
+});
+
+const html$6 = "";
+
+				const frontmatter$6 = {"layout":"../../layouts/Work.astro","publishDate":"2022-10-15T00:00:06.000Z","title":"FloristMart","imgSrc":"../assets/floristmart.png","imgSrcfull":"../assets/floristmart-full.png","link":"https://find.florismart.com/en","description":"Florismart helps you find local florists across the United Kingdom to fulfil your floral needs: from gift bouquets to funeral flowers and from wedding flowers to flower workshops.","builtwith":"Angular","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Contributed a few feature functionalities using Angular"]};
+				const file$6 = "C:/Project/astro/jerecho/src/pages/work/floristmart.md";
+				const url$6 = "/work/floristmart";
+				function rawContent$6() {
+					return "";
+				}
+				function compiledContent$6() {
+					return html$6;
+				}
+				function getHeadings$6() {
+					return [];
+				}
+				function getHeaders$6() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$6();
+				}				async function Content$6() {
+					const { layout, ...content } = frontmatter$6;
+					content.file = file$6;
+					content.url = url$6;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$6 });
+					return createVNode($$Work$1, {
+									file: file$6,
+									url: url$6,
+									content,
+									frontmatter: content,
+									headings: getHeadings$6(),
+									rawContent: rawContent$6,
+									compiledContent: compiledContent$6,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$6[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$6,
+  file: file$6,
+  url: url$6,
+  rawContent: rawContent$6,
+  compiledContent: compiledContent$6,
+  getHeadings: getHeadings$6,
+  getHeaders: getHeaders$6,
+  Content: Content$6,
+  default: Content$6
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$5 = "";
+
+				const frontmatter$5 = {"layout":"../../layouts/Work.astro","publishDate":"2022-10-15T00:00:04.000Z","title":"Rate My Agent (Property banter site)","imgSrc":"../assets/propertybanter.png","imgSrcfull":"../assets/propertybanter-full.png","link":"https://www.propertybanter.com.au","description":"RateMyAgent provides recommendations, ranking and reviews for real estate agents in Australia. Find the best real estate agent the first time so you can get the best results the first time. It's free to use, no sign-up required.","builtwith":"Hubspot CMS","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Hubspot CMS"]};
+				const file$5 = "C:/Project/astro/jerecho/src/pages/work/ratemyagent.md";
+				const url$5 = "/work/ratemyagent";
+				function rawContent$5() {
+					return "";
+				}
+				function compiledContent$5() {
+					return html$5;
+				}
+				function getHeadings$5() {
+					return [];
+				}
+				function getHeaders$5() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$5();
+				}				async function Content$5() {
+					const { layout, ...content } = frontmatter$5;
+					content.file = file$5;
+					content.url = url$5;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$5 });
+					return createVNode($$Work$1, {
+									file: file$5,
+									url: url$5,
+									content,
+									frontmatter: content,
+									headings: getHeadings$5(),
+									rawContent: rawContent$5,
+									compiledContent: compiledContent$5,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$5[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$5,
+  file: file$5,
+  url: url$5,
+  rawContent: rawContent$5,
+  compiledContent: compiledContent$5,
+  getHeadings: getHeadings$5,
+  getHeaders: getHeaders$5,
+  Content: Content$5,
+  default: Content$5
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$4 = "";
+
+				const frontmatter$4 = {"layout":"../../layouts/Work.astro","publishDate":"2022-10-15T00:00:03.000Z","title":"RegisterNow","imgSrc":"../assets/registernow.png","imgSrcfull":"../assets/registernow-full.png","link":"https://registernow.io","description":"Australia and New Zealand’s leading registration platform for mass participation sports events.","builtwith":"OctoberCMS, VueJS","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Implemeted VueJS functionality on the frontend","Fetch API data from azure web services"]};
+				const file$4 = "C:/Project/astro/jerecho/src/pages/work/registernow.md";
+				const url$4 = "/work/registernow";
+				function rawContent$4() {
+					return "";
+				}
+				function compiledContent$4() {
+					return html$4;
+				}
+				function getHeadings$4() {
+					return [];
+				}
+				function getHeaders$4() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$4();
+				}				async function Content$4() {
+					const { layout, ...content } = frontmatter$4;
+					content.file = file$4;
+					content.url = url$4;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$4 });
+					return createVNode($$Work$1, {
+									file: file$4,
+									url: url$4,
+									content,
+									frontmatter: content,
+									headings: getHeadings$4(),
+									rawContent: rawContent$4,
+									compiledContent: compiledContent$4,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$4[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page5 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$4,
+  file: file$4,
+  url: url$4,
+  rawContent: rawContent$4,
+  compiledContent: compiledContent$4,
+  getHeadings: getHeadings$4,
+  getHeaders: getHeaders$4,
+  Content: Content$4,
+  default: Content$4
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$3 = "";
+
+				const frontmatter$3 = {"layout":"../../layouts/Work.astro","publishDate":"2022-10-15T00:00:02.000Z","title":"BloomLocal","imgSrc":"../assets/bloomlocal.png","imgSrcfull":"../assets/bloomlocal-full.png","link":"https://www.bloomlocal.co.uk","description":"Send same day flowers and make someone smile in an instant!  Affordable next day flowers also available anywhere in the UK.  Easy ordering online.","builtwith":"Angular","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Initiated Angular based component for the shop site","Helped other devs with UI related issues on admin dashboard"]};
+				const file$3 = "C:/Project/astro/jerecho/src/pages/work/bloomlocal.md";
+				const url$3 = "/work/bloomlocal";
+				function rawContent$3() {
+					return "";
+				}
+				function compiledContent$3() {
+					return html$3;
+				}
+				function getHeadings$3() {
+					return [];
+				}
+				function getHeaders$3() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$3();
+				}				async function Content$3() {
+					const { layout, ...content } = frontmatter$3;
+					content.file = file$3;
+					content.url = url$3;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$3 });
+					return createVNode($$Work$1, {
+									file: file$3,
+									url: url$3,
+									content,
+									frontmatter: content,
+									headings: getHeadings$3(),
+									rawContent: rawContent$3,
+									compiledContent: compiledContent$3,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$3[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page6 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$3,
+  file: file$3,
+  url: url$3,
+  rawContent: rawContent$3,
+  compiledContent: compiledContent$3,
+  getHeadings: getHeadings$3,
+  getHeaders: getHeaders$3,
+  Content: Content$3,
+  default: Content$3
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$2 = "";
+
+				const frontmatter$2 = {"publishDate":"2022-10-15T00:00:00.000Z","layout":"../../layouts/Work.astro","title":"Arcanys Inc.","imgSrc":"../assets/arcanys.png","imgSrcfull":"../assets/arcanys-full.png","link":"https://arcanys.com","description":"Philippines' Top Software Development & Team Augmentation company. Hire the tech talents you need from a pool of 200+ dedicated software engineers.","builtwith":"NextJS","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Google apps integration, GTM, Analytics","Contributed a few feature functionalities using NextJS"]};
+				const file$2 = "C:/Project/astro/jerecho/src/pages/work/arcanys.md";
+				const url$2 = "/work/arcanys";
+				function rawContent$2() {
+					return "";
+				}
+				function compiledContent$2() {
+					return html$2;
+				}
+				function getHeadings$2() {
+					return [];
+				}
+				function getHeaders$2() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$2();
+				}				async function Content$2() {
+					const { layout, ...content } = frontmatter$2;
+					content.file = file$2;
+					content.url = url$2;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$2 });
+					return createVNode($$Work$1, {
+									file: file$2,
+									url: url$2,
+									content,
+									frontmatter: content,
+									headings: getHeadings$2(),
+									rawContent: rawContent$2,
+									compiledContent: compiledContent$2,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$2[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page7 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$2,
+  file: file$2,
+  url: url$2,
+  rawContent: rawContent$2,
+  compiledContent: compiledContent$2,
+  getHeadings: getHeadings$2,
+  getHeaders: getHeaders$2,
+  Content: Content$2,
+  default: Content$2
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html$1 = "";
+
+				const frontmatter$1 = {"publishDate":"2022-10-15T00:00:07.000Z","layout":"../../layouts/Work.astro","title":"ChildUp","imgSrc":"../assets/childup.png","imgSrcfull":"../assets/childup-full.png","link":"https://childup.com","description":"Early learning is key. Help your Child succeed.","builtwith":"GravCMS","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Develop frontend UI + data via GravCMS"]};
+				const file$1 = "C:/Project/astro/jerecho/src/pages/work/childup.md";
+				const url$1 = "/work/childup";
+				function rawContent$1() {
+					return "";
+				}
+				function compiledContent$1() {
+					return html$1;
+				}
+				function getHeadings$1() {
+					return [];
+				}
+				function getHeaders$1() {
+					console.warn('getHeaders() have been deprecated. Use getHeadings() function instead.');
+					return getHeadings$1();
+				}				async function Content$1() {
+					const { layout, ...content } = frontmatter$1;
+					content.file = file$1;
+					content.url = url$1;
+					content.astro = {};
+					Object.defineProperty(content.astro, 'headings', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "headings" from your layout, try using "Astro.props.headings."')
+						}
+					});
+					Object.defineProperty(content.astro, 'html', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "html" from your layout, try using "Astro.props.compiledContent()."')
+						}
+					});
+					Object.defineProperty(content.astro, 'source', {
+						get() {
+							throw new Error('The "astro" property is no longer supported! To access "source" from your layout, try using "Astro.props.rawContent()."')
+						}
+					});
+					const contentFragment = createVNode(Fragment, { 'set:html': html$1 });
+					return createVNode($$Work$1, {
+									file: file$1,
+									url: url$1,
+									content,
+									frontmatter: content,
+									headings: getHeadings$1(),
+									rawContent: rawContent$1,
+									compiledContent: compiledContent$1,
+									'server:root': true,
+									children: contentFragment
+								});
+				}
+				Content$1[Symbol.for('astro.needsHeadRendering')] = false;
+
+const _page8 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  frontmatter: frontmatter$1,
+  file: file$1,
+  url: url$1,
+  rawContent: rawContent$1,
+  compiledContent: compiledContent$1,
+  getHeadings: getHeadings$1,
+  getHeaders: getHeaders$1,
+  Content: Content$1,
+  default: Content$1
+}, Symbol.toStringTag, { value: 'Module' }));
+
+const html = "";
+
+				const frontmatter = {"layout":"../../layouts/Work.astro","publishDate":"2022-10-15T00:00:05.000Z","title":"Arcanys Early Learning Foundation","imgSrc":"../assets/elearning.png","imgSrcfull":"../assets/elearning-full.png","link":"https://www.arcanysfoundation.org","description":"The Arcanys Early Learning Foundation offers effective math coaching programs to parents and preschool children from low-income areas of the Philippines.","builtwith":"GravCMS","responsibilities":["UI/UX","HTML / SCSS, Responsive web design","Develop frontend UI + data via GravCMS from scratch"]};
+				const file = "C:/Project/astro/jerecho/src/pages/work/aelf.md";
+				const url = "/work/aelf";
 				function rawContent() {
-					return "<img src=\"assets/dots.svg\" width=\"525\">";
+					return "";
 				}
 				function compiledContent() {
 					return html;
@@ -1709,11 +2354,21 @@ const html = "<img src=\"assets/dots.svg\" width=\"525\">";
 						}
 					});
 					const contentFragment = createVNode(Fragment, { 'set:html': html });
-					return contentFragment;
+					return createVNode($$Work$1, {
+									file,
+									url,
+									content,
+									frontmatter: content,
+									headings: getHeadings(),
+									rawContent,
+									compiledContent,
+									'server:root': true,
+									children: contentFragment
+								});
 				}
-				Content[Symbol.for('astro.needsHeadRendering')] = true;
+				Content[Symbol.for('astro.needsHeadRendering')] = false;
 
-const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page9 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   frontmatter,
   file,
@@ -1726,118 +2381,30 @@ const _page2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   default: Content
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$8 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/Me.astro", { modules: [{ module: _page2, specifier: "../pages/home/me.md", assert: {} }, { module: _page2, specifier: "../pages/home/me.md", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$8 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/Me.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$Me = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$8, $$props, $$slots);
-  Astro2.self = $$Me;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="me-image astro-CAQ6UA63">
-  <img${addAttribute(frontmatter.me, "src")} alt="" class="me astro-CAQ6UA63" loading="lazy" width="317">
-  ${renderComponent($$result, "Me", Content, { "class": "astro-CAQ6UA63" })}
-</div>
-
-`;
-});
-
-const $$file$8 = "C:/Project/astro/jerecho/src/components/Me.astro";
-const $$url$8 = undefined;
-
-const $$module2$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  $$metadata: $$metadata$8,
-  default: $$Me,
-  file: $$file$8,
-  url: $$url$8
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const $$metadata$7 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/TopFold.astro", { modules: [{ module: $$module1$3, specifier: "../components/Intro.astro", assert: {} }, { module: $$module2$2, specifier: "./Me.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$7 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/TopFold.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$TopFold = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$7, $$props, $$slots);
-  Astro2.self = $$TopFold;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="top-fold astro-UZNU7MGG">
-  <!-- <Coconut /> -->
-  ${renderComponent($$result, "Intro", $$Intro, { "class": "astro-UZNU7MGG" })}
-  ${renderComponent($$result, "Me", $$Me, { "class": "astro-UZNU7MGG" })}
-  <!-- <WaterEffects /> -->
-</div>
-
-`;
-});
-
-const $$file$7 = "C:/Project/astro/jerecho/src/components/TopFold.astro";
-const $$url$7 = undefined;
-
-const $$module1$2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  $$metadata: $$metadata$7,
-  default: $$TopFold,
-  file: $$file$7,
-  url: $$url$7
-}, Symbol.toStringTag, { value: 'Module' }));
-
-var __freeze$1 = Object.freeze;
-var __defProp$1 = Object.defineProperty;
-var __template$1 = (cooked, raw) => __freeze$1(__defProp$1(cooked, "raw", { value: __freeze$1(raw || cooked.slice()) }));
-var _a$1;
-const $$metadata$6 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/MainContainer.astro", { modules: [{ module: $$module1$2, specifier: "./TopFold.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$6 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/MainContainer.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$MainContainer = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$6, $$props, $$slots);
-  Astro2.self = $$MainContainer;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate(_a$1 || (_a$1 = __template$1(["", '<main class="main-container astro-YKXOXMTJ">\n  ', '\n</main>\n\n\n\n<script defer>\n  window.addEventListener("load", function () {\n    document.body.classList.remove("blur");\n  });\n  window.onbeforeunload = function () {\n    document.body.classList.add("blur");\n  };\n<\/script>'])), maybeRenderHead($$result), renderComponent($$result, "TopFold", $$TopFold, { "class": "astro-YKXOXMTJ" }));
-});
-
-const $$file$6 = "C:/Project/astro/jerecho/src/components/MainContainer.astro";
-const $$url$6 = undefined;
-
-const $$module2$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  $$metadata: $$metadata$6,
-  default: $$MainContainer,
-  file: $$file$6,
-  url: $$url$6
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const $$metadata$5 = createMetadata("/@fs/C:/Project/astro/jerecho/src/pages/index.astro", { modules: [{ module: $$module1$5, specifier: "../layouts/Splash.astro", assert: {} }, { module: $$module2$1, specifier: "../components/MainContainer.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$5 = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/index.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
-const $$Index = createComponent(async ($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro$5, $$props, $$slots);
-  Astro2.self = $$Index;
-  return renderTemplate`${renderComponent($$result, "Splash", $$Splash, {}, { "default": () => renderTemplate`${renderComponent($$result, "Main", $$MainContainer, {})}` })}`;
-});
-
-const $$file$5 = "C:/Project/astro/jerecho/src/pages/index.astro";
-const $$url$5 = "";
-
-const _page0 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
-  __proto__: null,
-  $$metadata: $$metadata$5,
-  default: $$Index,
-  file: $$file$5,
-  url: $$url$5
-}, Symbol.toStringTag, { value: 'Module' }));
-
-const $$metadata$4 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/WorkList.astro", { modules: [], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$4 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/WorkList.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$4 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/WorkList.astro", { modules: [{ module: _page2, specifier: "../pages/home/work.md", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$4 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/WorkList.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$WorkList = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$4, $$props, $$slots);
   Astro2.self = $$WorkList;
+  const posts = (await Astro2.glob(/* #__PURE__ */ Object.assign({"../pages/work/aelf.md": () => Promise.resolve().then(() => _page9),"../pages/work/arcanys.md": () => Promise.resolve().then(() => _page7),"../pages/work/bloomlocal.md": () => Promise.resolve().then(() => _page6),"../pages/work/childup.md": () => Promise.resolve().then(() => _page8),"../pages/work/floristmart.md": () => Promise.resolve().then(() => _page3),"../pages/work/ratemyagent.md": () => Promise.resolve().then(() => _page4),"../pages/work/registernow.md": () => Promise.resolve().then(() => _page5)}), () => "../pages/work/*.md")).filter(({ frontmatter }) => !!frontmatter.publishDate).sort(
+    (a, b) => new Date(a.frontmatter.publishDate).valueOf() - new Date(b.frontmatter.publishDate).valueOf()
+  );
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`${maybeRenderHead($$result)}<div class="top-fold astro-APZ7OAUI">
-  <p class="astro-APZ7OAUI">test</p>
-  <!-- <Coconut /> -->
+  return renderTemplate`${maybeRenderHead($$result)}<div class="work-list astro-BTULB7EM">
+  <div class="heading-panel swup-delay-anim astro-BTULB7EM" style="animation-delay: var(--delay100)">
+    <h5 style="--shade: var(--c-gray);" class="astro-BTULB7EM">${frontmatter$7.title}</h5>
+    <p class="astro-BTULB7EM">${frontmatter$7.description}</p>
+    <p class="astro-BTULB7EM">${frontmatter$7.description2}</p>
+  </div>
+  <ul class="astro-BTULB7EM">
+    ${posts.map((post, i) => renderTemplate`<li class="swup-delay-anim astro-BTULB7EM"${addAttribute("animation-delay:" + (i += 3) + "00ms", "style")}>
+          <a${addAttribute(post.url, "href")}${addAttribute(post.frontmatter.title, "title")}${addAttribute(post.frontmatter.title, "data-title")} class="astro-BTULB7EM">
+            <img${addAttribute(post.frontmatter.imgSrc, "src")}${addAttribute(post.frontmatter.title, "alt")} class="astro-BTULB7EM">
+          </a>
+        </li>`)}
+  </ul>
 </div>
 
 `;
@@ -1854,19 +2421,19 @@ const $$module1$1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.definePropert
   url: $$url$4
 }, Symbol.toStringTag, { value: 'Module' }));
 
-var __freeze = Object.freeze;
-var __defProp = Object.defineProperty;
-var __template = (cooked, raw) => __freeze(__defProp(cooked, "raw", { value: __freeze(raw || cooked.slice()) }));
-var _a;
 const $$metadata$3 = createMetadata("/@fs/C:/Project/astro/jerecho/src/components/PortfolioContainer.astro", { modules: [{ module: $$module1$1, specifier: "./WorkList.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$3 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/PortfolioContainer.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$Astro$3 = createAstro("/@fs/C:/Project/astro/jerecho/src/components/PortfolioContainer.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$PortfolioContainer = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$3, $$props, $$slots);
   Astro2.self = $$PortfolioContainer;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate(_a || (_a = __template(["", '<main class="main-container astro-R3ALXACM">\n  ', '\n</main>\n\n\n\n<script defer>\n  window.addEventListener("load", function () {\n    document.body.classList.remove("blur");\n  });\n<\/script>'])), maybeRenderHead($$result), renderComponent($$result, "WorkList", $$WorkList, { "class": "astro-R3ALXACM" }));
+  return renderTemplate`${maybeRenderHead($$result)}<main class="main-container transition-fade astro-SENL7HH2" id="swup">
+  ${renderComponent($$result, "WorkList", $$WorkList, { "class": "astro-SENL7HH2" })}
+</main>
+
+`;
 });
 
 const $$file$3 = "C:/Project/astro/jerecho/src/components/PortfolioContainer.astro";
@@ -1880,24 +2447,34 @@ const $$module1 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
   url: $$url$3
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata$2 = createMetadata("/@fs/C:/Project/astro/jerecho/src/layouts/Experience.astro", { modules: [{ module: $$module1$7, specifier: "../components/Footer.astro", assert: {} }, { module: $$module1$6, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module3$1, specifier: "../components/Header.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$2 = createAstro("/@fs/C:/Project/astro/jerecho/src/layouts/Experience.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata$2 = createMetadata("/@fs/C:/Project/astro/jerecho/src/layouts/Experience.astro", { modules: [{ module: $$module2$3, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module1$7, specifier: "../components/Header.astro", assert: {} }, { module: $$module3$1, specifier: "../components/Footer.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro$2 = createAstro("/@fs/C:/Project/astro/jerecho/src/layouts/Experience.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Experience = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
   Astro2.self = $$Experience;
-  const STYLES = [];
-  for (const STYLE of STYLES)
-    $$result.styles.add(STYLE);
-  return renderTemplate`<html lang="en" class="astro-2GNULTYC">
+  return renderTemplate`<html lang="en">
   <head>
-    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Portfolio", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines", "class": "astro-2GNULTYC" })}
-    
+    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Portfolio", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines" })}
+    <style>
+      .container-grid {
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+      }
+      @media (min-width: 1000px) {
+        .container-grid {
+          grid-template-rows: 1fr;
+          display: grid;
+        }
+      }
+    </style>
   ${renderHead($$result)}</head>
-  <body class="blur astro-2GNULTYC">
-    <div class="container-grid astro-2GNULTYC">
-      ${renderComponent($$result, "Header", $$Header, { "class": "astro-2GNULTYC" })}
+  <body>
+    <div class="container-grid">
+      ${renderComponent($$result, "Header", $$Header, {})}
       ${renderSlot($$result, $$slots["default"])}
-      ${renderComponent($$result, "Footer", $$Footer, { "footerClass": "footer footer-work", "class": "astro-2GNULTYC" })}
+      ${renderComponent($$result, "Footer", $$Footer, {})}
     </div>
   </body></html>`;
 });
@@ -1914,7 +2491,7 @@ const $$module2 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty(
 }, Symbol.toStringTag, { value: 'Module' }));
 
 const $$metadata$1 = createMetadata("/@fs/C:/Project/astro/jerecho/src/pages/work.astro", { modules: [{ module: $$module1, specifier: "../components/PortfolioContainer.astro", assert: {} }, { module: $$module2, specifier: "../layouts/Experience.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro$1 = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/work.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$Astro$1 = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/work.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$Work = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$Work;
@@ -1924,7 +2501,7 @@ const $$Work = createComponent(async ($$result, $$props, $$slots) => {
 const $$file$1 = "C:/Project/astro/jerecho/src/pages/work.astro";
 const $$url$1 = "/work";
 
-const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page10 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   $$metadata: $$metadata$1,
   default: $$Work,
@@ -1932,25 +2509,25 @@ const _page3 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url$1
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const $$metadata = createMetadata("/@fs/C:/Project/astro/jerecho/src/pages/404.astro", { modules: [{ module: $$module1$6, specifier: "../components/MetaHead.astro", assert: {} }, { module: $$module2$4, specifier: "../components/Nav.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
-const $$Astro = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/404.astro", "https://j3rech0.netlify.app/", "file:///C:/Project/astro/jerecho/");
+const $$metadata = createMetadata("/@fs/C:/Project/astro/jerecho/src/pages/404.astro", { modules: [{ module: $$module1$7, specifier: "../components/Header.astro", assert: {} }, { module: $$module2$3, specifier: "../components/MetaHead.astro", assert: {} }], hydratedComponents: [], clientOnlyComponents: [], hydrationDirectives: /* @__PURE__ */ new Set([]), hoisted: [] });
+const $$Astro = createAstro("/@fs/C:/Project/astro/jerecho/src/pages/404.astro", "https://jerecho.com/", "file:///C:/Project/astro/jerecho/");
 const $$404 = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$404;
   const STYLES = [];
   for (const STYLE of STYLES)
     $$result.styles.add(STYLE);
-  return renderTemplate`<html lang="en" class="astro-KLJ6CSCR">
+  return renderTemplate`<html lang="en" class="astro-6XY24A3L">
   <head>
-    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Not Found", "class": "astro-KLJ6CSCR" })}
+    ${renderComponent($$result, "MetaHead", $$MetaHead, { "title": "Jech | Not Found", "description": "My name is Jech and I'm a Freelance Web Developer and designer from the Philippines", "class": "astro-6XY24A3L" })}
     
   ${renderHead($$result)}</head>
-  <body class="astro-KLJ6CSCR">
-    ${renderComponent($$result, "Nav", $$Nav, { "class": "astro-KLJ6CSCR" })}
-    <div class="astro-KLJ6CSCR">
-      <h1 class="astro-KLJ6CSCR">Page Not Found</h1>
-
-      <a href="/" class="astro-KLJ6CSCR">back</a>
+  <body class="astro-6XY24A3L">
+    <div class="container-grid astro-6XY24A3L">
+      ${renderComponent($$result, "Header", $$Header, { "class": "astro-6XY24A3L" })}
+      <main class="main-container transition-fade astro-6XY24A3L" id="swup">
+        <h1 class="astro-6XY24A3L">404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 404 </h1>
+      </main>
     </div>
   </body></html>`;
 });
@@ -1958,7 +2535,7 @@ const $$404 = createComponent(async ($$result, $$props, $$slots) => {
 const $$file = "C:/Project/astro/jerecho/src/pages/404.astro";
 const $$url = "/404";
 
-const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+const _page11 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   __proto__: null,
   $$metadata,
   default: $$404,
@@ -1966,7 +2543,7 @@ const _page4 = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
   url: $$url
 }, Symbol.toStringTag, { value: 'Module' }));
 
-const pageMap = new Map([['src/pages/index.astro', _page0],['src/pages/home/intro.md', _page1],['src/pages/home/me.md', _page2],['src/pages/work.astro', _page3],['src/pages/404.astro', _page4],]);
+const pageMap = new Map([['src/pages/index.astro', _page0],['src/pages/home/intro.md', _page1],['src/pages/home/work.md', _page2],['src/pages/work/floristmart.md', _page3],['src/pages/work/ratemyagent.md', _page4],['src/pages/work/registernow.md', _page5],['src/pages/work/bloomlocal.md', _page6],['src/pages/work/arcanys.md', _page7],['src/pages/work/childup.md', _page8],['src/pages/work/aelf.md', _page9],['src/pages/work.astro', _page10],['src/pages/404.astro', _page11],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),];
 
 if (typeof process !== "undefined") {
@@ -2038,7 +2615,7 @@ function deserializeManifest(serializedManifest) {
   };
 }
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/404-index-work.3590d5a2.css","assets/index-work.bf6abf16.css","assets/index.69995dcd.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/home/intro","type":"page","pattern":"^\\/home\\/intro\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}],[{"content":"intro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home/intro.md","pathname":"/home/intro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/home/me","type":"page","pattern":"^\\/home\\/me\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}],[{"content":"me","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home/me.md","pathname":"/home/me","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/work.bf6fc389.css","assets/404-index-work.3590d5a2.css","assets/index-work.bf6abf16.css"],"scripts":[],"routeData":{"route":"/work","type":"page","pattern":"^\\/work\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work.astro","pathname":"/work","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.d05432fa.css","assets/404-index-work.3590d5a2.css"],"scripts":[],"routeData":{"route":"/404","type":"page","pattern":"^\\/404\\/?$","segments":[[{"content":"404","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/404.astro","pathname":"/404","_meta":{"trailingSlash":"ignore"}}}],"site":"https://j3rech0.netlify.app/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/404.d05432fa.css","/assets/404-index-work.3590d5a2.css","/assets/index.69995dcd.css","/assets/index-work.bf6abf16.css","/assets/work.bf6fc389.css","/robots.txt","/assets/circle-stroke.svg","/assets/coconut.svg","/assets/codepen.svg","/assets/cta-arrow.svg","/assets/dots.svg","/assets/dribbble.svg","/assets/fake_cursor.svg","/assets/fav.svg","/assets/footer-dots.svg","/assets/logo-stroke.svg","/assets/me.png","/assets/me.svg","/assets/mountains.svg","/assets/ocean.svg","/assets/og-cover.png","/assets/stroke-bg.svg","/assets/youtube.svg"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/index.46ff800a.css"],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/home/intro","type":"page","pattern":"^\\/home\\/intro\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}],[{"content":"intro","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home/intro.md","pathname":"/home/intro","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"route":"/home/work","type":"page","pattern":"^\\/home\\/work\\/?$","segments":[[{"content":"home","dynamic":false,"spread":false}],[{"content":"work","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/home/work.md","pathname":"/home/work","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/floristmart","type":"page","pattern":"^\\/work\\/floristmart\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"floristmart","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/floristmart.md","pathname":"/work/floristmart","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/ratemyagent","type":"page","pattern":"^\\/work\\/ratemyagent\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"ratemyagent","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/ratemyagent.md","pathname":"/work/ratemyagent","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/registernow","type":"page","pattern":"^\\/work\\/registernow\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"registernow","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/registernow.md","pathname":"/work/registernow","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/bloomlocal","type":"page","pattern":"^\\/work\\/bloomlocal\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"bloomlocal","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/bloomlocal.md","pathname":"/work/bloomlocal","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/arcanys","type":"page","pattern":"^\\/work\\/arcanys\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"arcanys","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/arcanys.md","pathname":"/work/arcanys","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/childup","type":"page","pattern":"^\\/work\\/childup\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"childup","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/childup.md","pathname":"/work/childup","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css","assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css"],"scripts":[],"routeData":{"route":"/work/aelf","type":"page","pattern":"^\\/work\\/aelf\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}],[{"content":"aelf","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work/aelf.md","pathname":"/work/aelf","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/f9b40345.406290d0.css","assets/65144cb1.bf910ba4.css","assets/work.7a2c83ad.css","assets/3511a966.bc83fe5b.css","assets/62b4ebfc.b4885080.css"],"scripts":[],"routeData":{"route":"/work","type":"page","pattern":"^\\/work\\/?$","segments":[[{"content":"work","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/work.astro","pathname":"/work","_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["assets/404.7256e44d.css","assets/3511a966.bc83fe5b.css"],"scripts":[],"routeData":{"route":"/404","type":"page","pattern":"^\\/404\\/?$","segments":[[{"content":"404","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/404.astro","pathname":"/404","_meta":{"trailingSlash":"ignore"}}}],"site":"https://jerecho.com/","base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"extendDefaultPlugins":false,"isAstroFlavoredMd":false},"pageMap":null,"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"entry.mjs","astro:scripts/before-hydration.js":""},"assets":["/assets/404.7256e44d.css","/assets/3511a966.bc83fe5b.css","/assets/62b4ebfc.b4885080.css","/assets/65144cb1.bf910ba4.css","/assets/f9b40345.406290d0.css","/assets/index.46ff800a.css","/assets/work.7a2c83ad.css","/favicon.ico","/robots.txt","/assets/arcanys-full.png","/assets/arcanys.png","/assets/bi_arrow-left-short.svg","/assets/bloomlocal-full.png","/assets/bloomlocal.png","/assets/bx_link-alt.svg","/assets/childup-full.png","/assets/childup.png","/assets/circle-stroke.svg","/assets/coconut.svg","/assets/codepen.svg","/assets/cta-arrow.svg","/assets/dots.svg","/assets/dribbble.svg","/assets/elearning-full.png","/assets/elearning.png","/assets/fake_cursor.svg","/assets/fav.svg","/assets/floristmart-full.png","/assets/floristmart.png","/assets/footer-dots.svg","/assets/logo-stroke.svg","/assets/me.png","/assets/me.svg","/assets/mountains.svg","/assets/ocean.svg","/assets/og-cover.png","/assets/propertybanter-full.png","/assets/propertybanter.png","/assets/registernow-full.png","/assets/registernow.png","/assets/stroke-bg.svg","/assets/youtube.svg"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });
