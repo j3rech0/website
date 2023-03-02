@@ -45,9 +45,14 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
     >
       <header class="swup-delay-anim" style="animation-delay: var(--delay300)">
         <h3>{title}</h3>
-        <a href={link} target="_blank" rel="noopener noreferrer"
-          ><img src="/assets/bx_link-alt.svg" alt="" width="17" />{link}
-        </a>
+        {
+          link && (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              <img src="/assets/bx_link-alt.svg" alt="" width="17" />
+              {link}
+            </a>
+          )
+        }
       </header>
       <div class="swup-delay-anim" style="animation-delay: var(--delay400)">
         <p>{description}</p>
@@ -86,7 +91,7 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
         margin-bottom: rem(50);
         a {
           color: var(--c-gray-500);
-         
+
           &:hover {
             color: white;
           }
