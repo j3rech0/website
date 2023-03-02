@@ -1,1 +1,0 @@
-declare module '@swup/a11y-plugin';

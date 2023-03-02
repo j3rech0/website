@@ -9,7 +9,7 @@ export default defineConfig({
   output: "server",
   adapter: netlify(),
   build: {
-    sitemap: true,
+    sitemap: true, 
   },
-  site: "https://jerecho.com",
+  site: "https://jerecho.com/",
 });
