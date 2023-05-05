@@ -18,29 +18,27 @@ const svgHover = `<path d="M19.6962 9.7904C17.8868 9.7904 10.1157 14.858 7.94052
 
 <style lang="scss">
   @import "../styles/mixin.scss";
-  @keyframes dash {
-    from {
-      stroke-dashoffset: 0;
-    }
-    to {
-      stroke-dashoffset: 150;
-    }
-  }
-  @keyframes dashReverse {
-    from {
-      stroke-dashoffset: 150;
-    }
-    to {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-  }
+  
   a {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     transition: 200ms;
+    &:hover {
+      :global(.svgIcon path) {
+        stroke-width: 2;
+      }
+      :global(.svgHover) {
+        opacity: 1;
+      }
+      // .svgHover path {
+      //   animation: dashReverse 500ms;
+      //   animation-fill-mode: forwards;
+      //   animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
+      //   animation-delay: 0s;
+      // }
+    }
     :global(.svgIcon) {
       padding-left: rem(8);
     }
@@ -58,25 +56,12 @@ const svgHover = `<path d="M19.6962 9.7904C17.8868 9.7904 10.1157 14.858 7.94052
     :global(.svgHover path) {
       stroke-dasharray: 150;
       stroke-dashoffset: -150;
-      animation: dash 500ms;
-      animation-fill-mode: forwards;
-      animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
-      animation-delay: 0s;
+      // animation: dash 500ms;
+      // animation-fill-mode: forwards;
+      // animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
+      // animation-delay: 0s;
     }
-    &:hover {
-      :global(.svgIcon path) {
-        stroke-width: 2;
-      }
-      :global(.svgHover) {
-        opacity: 1;
-      }
-      :global(.svgHover path) {
-        animation: dashReverse 500ms;
-        animation-fill-mode: forwards;
-        animation-timing-function: cubic-bezier(0.8, 0.03, 0.73, 0.97);
-        animation-delay: 0s;
-      }
-    }
+
     &.link-codepen {
       &:hover {
         :global(.svgIcon path) {
@@ -108,4 +93,21 @@ const svgHover = `<path d="M19.6962 9.7904C17.8868 9.7904 10.1157 14.858 7.94052
       margin-left: 2.5rem;
     }
   }
+  // @keyframes dash {
+  //   from {
+  //     stroke-dashoffset: 0;
+  //   }
+  //   to {
+  //     stroke-dashoffset: 150;
+  //   }
+  // }
+  // @keyframes dashReverse {
+  //   from {
+  //     stroke-dashoffset: 150;
+  //   }
+  //   to {
+  //     stroke-dashoffset: 0;
+  //     opacity: 1;
+  //   }
+  // }
 </style>
