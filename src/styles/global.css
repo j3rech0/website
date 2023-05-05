@@ -11,6 +11,9 @@
   --f-roboto-mono: "Roboto Mono", monospace;
   --f-abel: "Abel", sans-serif;
   --c-black: #16161d;
+  --c-black-100: 240deg 14.29% 8.24%;
+  --c-black-200: #1a1a22;
+
   --c-green: #5becc0;
   --c-blue: #abcee5;
   --c-gray: #28293f;
@@ -38,7 +41,7 @@
   --t-active: var(--c-blue);
 
   --h-full: 100vh;
-  --w-full: 62.5rem; /* 1000px; */
+  --w-full: 75rem; /* 1000px; */
 
   --p-tiny: 0.7rem;
   --m-tiny: 0.7rem;

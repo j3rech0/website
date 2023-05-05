@@ -46,15 +46,15 @@ import SocialMedia from "./SocialMedia.astro";
   }
   .splash-container {
     position: relative;
-    margin-top: var(--m-large);
-    margin-bottom: var(--m-large);
-    @include bp(1000) {
+    // margin-top: var(--m-large);
+    // margin-bottom: var(--m-large);
+    @include bp(1001) {
       margin-block: auto;
     }
   }
   .card-splash {
     cursor: default;
-    max-width: rem(680);
+    // max-width: rem(680);
     > h5 {
       --shade: rgba(var(--c-gray), 0.58);
       opacity: var(--opacity);
@@ -76,7 +76,8 @@ import SocialMedia from "./SocialMedia.astro";
       background-position: 0 calc(rem(20) / 5);
     }
     > h1 {
-      font-size: 7vw;
+      font-size: 5vw;
+      white-space: nowrap;
       font-weight: 100;
       color: var(--c-white);
       font-family: var(--f-abel);
@@ -104,7 +105,8 @@ import SocialMedia from "./SocialMedia.astro";
       font-weight: 100;
       margin: 0;
       @include bp(1050) {
-        width: rem(510);
+        width: 100%;
+        max-width: rem(510);
         font-size: rem(20);
       }
     }

@@ -12,16 +12,17 @@ import Footer from "../components/Footer.astro";
     />
     <style is:inline>
       .container-grid {
+        display: grid;
         grid-template-areas:
           "header"
           "content"
           "footer";
         grid-template-columns: 1fr;
-        grid-template-rows: 10vh 60vh calc(30vh - 4rem);
+        grid-template-rows: 15vh 60vh calc(30vh - 2rem);
       }
       @media (min-width: 1000px) {
         .container-grid {
-          display: grid;
+          grid-template-rows: 10vh 60vh calc(30vh - 4rem);
         }
       }
     </style>

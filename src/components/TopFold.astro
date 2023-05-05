@@ -13,21 +13,22 @@ import Me from "./Me.astro";
 
   .top-fold {
     cursor: default;
-    @include bp(500) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      place-content: center;
-      margin-inline: auto;
-      max-width: 80vw;
-      align-items: flex-end;
-    }
+    height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    place-content: center;
+    margin-inline: auto;
+    max-width: 80vw;
+    align-items: flex-start;
+    column-gap: 50px;
+    row-gap: 50px;
     @include bp(1024) {
       padding-bottom: rem(20);
       padding-inline: rem(30);
     }
     @include bp(1200) {
-      max-width: rem(1000);
-      padding-top: rem(70);
+      max-width: rem(1200);
+      // padding-top: rem(70);
     }
   }
 </style>
