@@ -22,7 +22,7 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
   >
     <h5 style="--shade: var(--c-gray);">{work.frontmatter.title}</h5>
     <p>{work.frontmatter.description}</p>
-    <p>{work.frontmatter.description2}</p>
+    <!-- <p>{work.frontmatter.description2}</p> -->
   </div>
   <ul>
     {
