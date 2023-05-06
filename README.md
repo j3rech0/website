@@ -14,3 +14,7 @@ In progress website code using Astro, will definitely update in the future.
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+To do:
+- https://decapcms.org/docs/add-to-your-site/
+    - https://www.youtube.com/watch?v=3yip2wSRX_4&t=321s
