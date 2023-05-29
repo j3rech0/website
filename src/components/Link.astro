@@ -17,6 +17,7 @@ const { text, className, url, title, hasIcon } = Astro.props;
     align-items: center;
     justify-content: center;
   }
+
   .cta {
     background-color: var(--c-green);
     color: var(--c-black);
@@ -31,6 +32,17 @@ const { text, className, url, title, hasIcon } = Astro.props;
     font-family: var(--f-roboto-mono);
     letter-spacing: 1px;
     transition: 200ms;
+    &-link {
+      background-color: transparent;
+      padding-left: rem(2);
+      width: auto;
+      text-align: left;
+      justify-content: flex-start;
+      margin-top: rem(20);
+      font-size: rem(14);
+      color: var(--c-green);
+      font-weight: 400;
+    }
     .svg {
       margin-left: rem(10);
       transition: 200ms ease-in-out;

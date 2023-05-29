@@ -1,6 +1,5 @@
 ---
 import * as splash from "../pages/home/intro.md";
-import Link from "./Link.astro";
 import SocialMedia from "./SocialMedia.astro";
 ---
 
@@ -23,12 +22,6 @@ import SocialMedia from "./SocialMedia.astro";
       class="splash-links swup-delay-anim"
       style="animation-delay: var(--delay500);"
     >
-      <Link
-        url="/work"
-        text="View Portfolio"
-        className="cta animTrigger"
-        title="View Portfolio"
-      />
       <SocialMedia />
     </div>
   </div>
@@ -39,22 +32,17 @@ import SocialMedia from "./SocialMedia.astro";
   .splash-links {
     display: flex;
     flex-direction: column;
-    margin-top: var(--m-medium);
+    margin-top: var(--m-tiny);
     @include bp(768) {
       flex-direction: row;
     }
   }
   .splash-container {
     position: relative;
-    // margin-top: var(--m-large);
-    // margin-bottom: var(--m-large);
-    @include bp(1001) {
-      margin-block: auto;
-    }
+    
   }
   .card-splash {
     cursor: default;
-    // max-width: rem(680);
     > h5 {
       --shade: rgba(var(--c-gray), 0.58);
       opacity: var(--opacity);
@@ -76,7 +64,7 @@ import SocialMedia from "./SocialMedia.astro";
       background-position: 0 calc(rem(20) / 5);
     }
     > h1 {
-      font-size: 5vw;
+      font-size: rem(30);
       white-space: nowrap;
       font-weight: 100;
       color: var(--c-white);
@@ -86,13 +74,14 @@ import SocialMedia from "./SocialMedia.astro";
         color: var(--c-green);
       }
       @include bp(600) {
-        font-size: 5vw;
+        font-size: 4vw;
       }
       @include bp(1024) {
+        font-size: 3vw;
         margin-bottom: calc(4vw / 2);
       }
       @include bp(1224) {
-        font-size: rem(53);
+        font-size: rem(32);
         margin-bottom: calc(rem(53) / 2);
       }
     }
@@ -102,7 +91,7 @@ import SocialMedia from "./SocialMedia.astro";
       line-height: 1.7;
       letter-spacing: 1px;
       font-family: var(--f-roboto-mono);
-      font-weight: 100;
+      font-weight: 200;
       margin: 0;
       @include bp(1050) {
         width: 100%;

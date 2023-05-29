@@ -1,0 +1,47 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\jechu\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add astro@latest
+
+PATH: 
+  C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\Microsoft\Web Platform Installer\;C:\php;C:\composer;C:\Program Files\nodejs\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PowerShell\7\;C:\Program Files\dotnet\;C:\Users\jechu\AppData\Local\pnpm;C:\Users\jechu\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\jechu\AppData\Local\Programs\Python\Python311\;C:\Users\jechu\scoop\shims;C:\Users\jechu\AppData\Local\Microsoft\WindowsApps;C:\Users\jechu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\jechu\AppData\Roaming\npm;C:\Users\jechu\AppData\Local\Microsoft\WindowsApps;C:\Users\jechu\.dotnet\tools
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Project\astro\jerecho\node_modules\astro\node_modules\@esbuild\win32-x64\esbuild.exe'
+
+npm manifest: 
+  {
+    "name": "@2023/portfolio",
+    "type": "module",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "dev": "astro dev",
+      "start": "astro dev",
+      "build": "astro build",
+      "preview": "astro preview",
+      "astro": "astro"
+    },
+    "dependencies": {
+      "@astrojs/netlify": "^2.1.3",
+      "astro": "^2.0.16",
+      "netlify-cli": "^2.71.0"
+    },
+    "devDependencies": {
+      "astro-compress": "1.0.9",
+      "sass": "^1.54.9"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

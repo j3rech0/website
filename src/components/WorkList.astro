@@ -1,5 +1,6 @@
 ---
 import * as work from "../pages/home/work.md";
+import Link from "./Link.astro";
 export interface Project {
   title: string;
   publishDate: string;
@@ -21,8 +22,12 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
     style="animation-delay: var(--delay100)"
   >
     <h5 style="--shade: var(--c-gray);">{work.frontmatter.title}</h5>
-    <p>{work.frontmatter.description}</p>
-    <!-- <p>{work.frontmatter.description2}</p> -->
+    <Link
+      url="/archive"
+      text="View the archive"
+      className="cta cta-link animTrigger"
+      title="View the archive"
+    />
   </div>
   <ul>
     {
@@ -88,7 +93,7 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
           padding-inline: rem(20);
           filter: blur(5px) opacity(0);
           height: fit-content;
-          @include bp(1024){
+          @include bp(1024) {
             font-size: rem(20);
           }
         }
@@ -121,13 +126,21 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
     }
   }
   .heading-panel {
-    max-width: rem(800);
-
+    max-width: var(--w-full);
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    @include bp(768) {
+      display: flex;
+    }
+    > .cta {
+      margin-top: 0;
+      padding-right: 0;
+    }
     > h5 {
       opacity: var(--opacity);
       font-size: rem(20);
       font-weight: 600;
-      margin-bottom: rem(20);
       color: var(--c-white);
       font-weight: 400;
       font-family: var(--f-roboto-mono);

@@ -1,13 +1,19 @@
 ---
-// const me = "./assets/me.svg";
-// const mepng = "./assets/me.png";
+import Link from "./Link.astro";
 ---
 
 <div
   class="recent-project me-image swup-delay-anim"
   style="animation-delay: var(--delay400)"
 >
-  <p class="-title">Recent project.</p>
+  <p class="-title">
+    Recent project. <Link
+      url="/work"
+      text="View all"
+      className="cta cta-link animTrigger"
+      title="View all"
+    />
+  </p>
   <ul class="-list">
     <li>
       <div class="-description">
@@ -91,14 +97,51 @@
         </a>
       </div>
     </li>
+    <li>
+      <div class="-description">
+        <a
+          href="https://github.com/j3rech0/learnhangul"
+          title="Watchlyst source code"
+          target="_blank">LearnHangul (In progress..)</a
+        >
+        <p>
+          An easy-to-use app designed for learning the Korean alphabet, also
+          known as Hangul.
+        </p>
+
+        <a
+          href="https://github.com/j3rech0/learnhangul"
+          title="Watchlyst source code"
+          target="_blank"
+          class="-links"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-github"
+            ><title>GitHub source code</title><path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path></svg
+          >
+        </a>
+      </div>
+    </li>
   </ul>
-  <!-- <img src={me} alt="Me" class="me" width="317" />
-  <img src={mepng} alt="Jech" class="me-png" width="317" /> -->
 </div>
 
 <style lang="scss">
   @import "../styles/mixin.scss";
   .recent-project {
+    margin-top: rem(70);
+    @include bp(480) {
+      margin-top: auto;
+    }
     @include bp(1000) {
       max-width: 540px;
       width: 100%;
@@ -119,33 +162,91 @@
     }
     .-title {
       color: var(--c-gray-400);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      > .cta {
+        margin-top: 0;
+      }
     }
+    
     .-list {
-      margin-top: calc(5vw / 2);
+      margin-top: rem(7);
+      color: var(--c-gray-400);
+      font-size: 14px;
+      letter-spacing: 1px;
+      background: hsl(var(--c-black-100));
+      padding: 20px;
+      border: 1px solid var(--c-black-200);
+      line-height: 1.6;
+      position: relative;
+      --a: 10deg;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(
+          var(--a),
+          rgba(255, 255, 255, 0.6),
+          var(--c-black) 6%
+        );
+        opacity: 0;
+        animation: glow 1s ease-out forwards 400ms;
+        transition: 800ms;
+      }
+      &::after {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        z-index: -2;
+        filter: blur(20px);
+      }
+      &::before {
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        z-index: -1;
+      }
     }
+    
     .-list > li {
       display: flex;
       flex-flow: row wrap;
     }
 
-    li > .-description {
-      color: var(--c-gray-400);
-      font-size: 14px;
-      letter-spacing: 1px;
-      background: hsl(var(--c-black-100) / 0.6);
-      padding: 20px;
-      border: 1px solid var(--c-black-200);
-      line-height: 1.6;
-      > a {
-        font-size: rem(13);
-        transition: 200ms;
-        &:hover {
-          color: var(--c-green);
-        }
-        &:has(svg) {
-          display: inline-flex;
-          + a {
-            margin-left: rem(15);
+    li {
+      + li {
+        border-top: 1px solid var(--c-black-200);
+        margin-top: rem(20);
+        padding-top: rem(20);
+      }
+      > .-description {
+        // color: var(--c-gray-400);
+        // font-size: 14px;
+        // letter-spacing: 1px;
+        // background: hsl(var(--c-black-100) / 0.6);
+        // padding: 20px;
+        // border: 1px solid var(--c-black-200);
+        // line-height: 1.6;
+        > a {
+          font-size: rem(13);
+          transition: 200ms;
+          &:hover {
+            color: var(--c-green);
+          }
+          &.-links{
+            display: inline-flex;
+            + a{
+              margin-left: rem(15);
+            }
+          }
+          &:has(svg) {
+            display: inline-flex;
+            + a {
+              margin-left: rem(15);
+            }
           }
         }
       }

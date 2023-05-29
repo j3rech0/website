@@ -10,10 +10,13 @@ import TopFold from "./TopFold.astro";
   @import "../styles/mixin.scss";
   .main-container {
     margin-inline: auto;
-    margin-top: auto;
-    @include bp(1024) {
-      margin-right: -2rem;
-      margin-left: -2rem;
+    margin-top: 3rem;
+    @include bp(964){
+      margin-top: auto;
+      
+    }
+    @include bp(1200) {
+      width: 100%;
     }
   }
 </style>

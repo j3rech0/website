@@ -4,7 +4,7 @@
   background dark: #16161D
   foreground light: #E2F1F0
   accent 1:  #408D8A
-  accent 2:  #5BECC0
+  accent 2:  #94efc6
   */
   --f-rubik: "Rubik Glitch", cursive;
   --f-roboto: "Roboto", sans-serif;
@@ -14,8 +14,11 @@
   --c-black-100: 240deg 14.29% 8.24%;
   --c-black-200: #1a1a22;
 
-  --c-green: #5becc0;
+  --c-green: #94efc6;
+  --c-green2: #c8ffaf;
+  --c-purple: #a206c9;
   --c-blue: #abcee5;
+  --c-blue2: #554dc6;
   --c-gray: #28293f;
   --c-gray-100: #cacad4;
   --c-gray-200: #494949;
@@ -143,4 +146,27 @@ html.is-animating .transition-fade {
   animation: anim 500ms forwards;
   opacity: 0;
   transform: translateY(-10px);
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 180deg;
+}
+
+@keyframes glow {
+  from {
+    --a: 180deg;
+  }
+  50% {
+    --a: 270deg;
+  }
+  70%{
+    --a: 360deg;
+  }
+  100%{
+    --a: 480deg;
+    opacity: 1;
+  }
+  
 }

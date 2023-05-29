@@ -1,0 +1,250 @@
+---
+import Link from "./Link.astro";
+const icon = `<svg
+width="44"
+height="44"
+viewBox="0 0 44 44"
+fill="none"
+xmlns="http://www.w3.org/2000/svg"
+class="svg-icon"
+>
+<g opacity="0.5">
+  <path
+  fill-rule="evenodd"
+  clip-rule="evenodd"
+  d="M33 22C33 22.3647 32.8551 22.7144 32.5973 22.9723C32.3394 23.2302 31.9897 23.375 31.625 23.375H15.6943L21.5985 29.2765C21.7263 29.4044 21.8278 29.5561 21.8969 29.7232C21.9661 29.8902 22.0017 30.0692 22.0017 30.25C22.0017 30.4308 21.9661 30.6098 21.8969 30.7769C21.8278 30.9439 21.7263 31.0957 21.5985 31.2235C21.4707 31.3514 21.3189 31.4528 21.1519 31.522C20.9848 31.5912 20.8058 31.6268 20.625 31.6268C20.4442 31.6268 20.2652 31.5912 20.0981 31.522C19.9311 31.4528 19.7793 31.3514 19.6515 31.2235L11.4015 22.9735C11.2735 22.8458 11.1719 22.6941 11.1025 22.527C11.0332 22.36 10.9975 22.1809 10.9975 22C10.9975 21.8192 11.0332 21.6401 11.1025 21.473C11.1719 21.306 11.2735 21.1543 11.4015 21.0265L19.6515 12.7765C19.9097 12.5183 20.2599 12.3733 20.625 12.3733C20.9901 12.3733 21.3403 12.5183 21.5985 12.7765C21.8567 13.0347 22.0017 13.3849 22.0017 13.75C22.0017 14.1152 21.8567 14.4653 21.5985 14.7235L15.6943 20.625H31.625C31.9897 20.625 32.3394 20.7699 32.5973 21.0278C32.8551 21.2856 33 21.6354 33 22Z"
+  fill="white"></path>
+  </g>
+  </svg>`;
+interface Frontmatter {
+  name: string;
+  label_color?: string;
+  employer: string;
+  stack: string[];
+  link?: string;
+}
+const projects = (
+  await Astro.glob<Frontmatter>("../pages/work/archive/*.md")
+).filter(({ frontmatter }) => !!frontmatter.label_color);
+---
+
+<div class="work-list">
+  <div
+    class="heading-panel swup-delay-anim"
+    style="animation-delay: var(--delay100)"
+  >
+    <h5 style="--shade: var(--c-gray);">Projects Completed: 2009-2014</h5>
+    <Link
+      className="flex-row-reverse"
+      url="/work"
+      text="recent project"
+      title="recent project?"
+      hasIcon={icon}
+    />
+  </div>
+
+  <div
+    class="archive-list swup-delay-anim"
+    style="animation-delay: var(--delay300)"
+  >
+    <div class="tHead">
+      <p class="col-1">Project</p>
+      <p class="hideMobile col-2">Made at</p>
+      <p class="hideMobile col-3">Built with</p>
+      <p class="col-4">Link</p>
+    </div>
+
+    <ul>
+      {
+        projects.map((project) => (
+          <li>
+            <strong class="col-1">{project.frontmatter.name}</strong>
+            <p
+              class="hideMobile col-2"
+              style={"color:var(" + project.frontmatter.label_color + ")"}
+            >
+              {project.frontmatter.employer}
+            </p>
+            <div class="hideMobile col-3">
+              {project.frontmatter.stack.map((s: string) => (
+                <img src={s} class="hideMobile" alt="" width="24" height="24" />
+              ))}
+            </div>
+            {project.frontmatter.link ? (
+              <a href={project.frontmatter.link} class="col-4" target="_blank">
+                <img
+                  src="/assets/bx_link-alt.svg"
+                  alt=""
+                  width="17"
+                  height="17"
+                />
+              </a>
+            ) : (
+              <a href="/" class="col-4" target="_blank" style="opacity:.3">
+                <img
+                  src="/assets/bx_link-alt.svg"
+                  alt=""
+                  width="17"
+                  height="17"
+                />
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<style lang="scss">
+  @import "../styles/mixin.scss";
+  @include bp(425) {
+    [class*="col-"] {
+      width: 20%;
+    }
+    .col-1 {
+      width: 40%;
+    }
+    .col-2 {
+      width: 20%;
+    }
+    .col-3 {
+      width: 20%;
+    }
+    .col-4 {
+      width: 5%;
+    }
+  }
+  @include bp(1280) {
+    .col-2 {
+      width: 15%;
+    }
+  }
+  // .archive-list {
+  //   @include bp(1024) {
+  //     width: 50%;
+  //   }
+  // }
+  .hideMobile {
+    display: none;
+    &:has(ul) {
+      display: none;
+    }
+    @include bp(600) {
+      display: block;
+    }
+  }
+  .tHead {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(50);
+    flex-flow: row wrap;
+    p {
+      color: var(--c-gray-300);
+    }
+  }
+  .work-list {
+    margin-block: rem(50);
+    @include bp(1024) {
+      // display: flex;
+      align-items: baseline;
+      column-gap: 1rem;
+      justify-content: space-between;
+    }
+    ul {
+      display: flex;
+      flex-flow: column wrap;
+      // column-gap: 2rem;
+      // row-gap: 1rem;
+      // max-width: rem(940);
+      a {
+        position: relative;
+        display: block;
+        transition: 200ms;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+      li {
+        padding-top: rem(8);
+        padding-bottom: rem(8);
+        color: var(--c-gray-500);
+        display: flex;
+        // row-gap: 1rem;
+        // column-gap: 0.5rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        > div {
+          display: flex;
+          align-items: flex-start;
+          column-gap: 0.5rem;
+        }
+        > div > small {
+          background: hsl(var(--c-black-100));
+          padding: rem(7) rem(11);
+          border: 1px solid var(--c-black-200);
+          color: var(--c-gray-400);
+        }
+        > strong {
+          color: var(--c-gray-100);
+          font-size: rem(18);
+          font-weight: 400;
+        }
+        + li {
+          box-shadow: 0px -1px 0px var(--c-gray);
+        }
+      }
+      @include bp(1024) {
+        column-gap: 4rem;
+        // row-gap: 0.75rem;
+      }
+    }
+    @include bp(500) {
+      margin-inline: auto;
+      max-width: var(--w-full);
+    }
+    @include bp(1200) {
+      padding-top: rem(70);
+    }
+  }
+  .heading-panel {
+    max-width: var(--w-full);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    @include bp(768) {
+      // width: 40%;
+    }
+    .flex-row-reverse {
+      flex-direction: row-reverse;
+    }
+    > .cta {
+      margin-top: 0;
+      padding-right: 0;
+    }
+    > h5 {
+      opacity: var(--opacity);
+      margin-top: rem(20);
+      font-size: rem(20);
+      color: var(--c-white);
+      font-weight: 400;
+      font-family: var(--f-roboto-mono);
+      width: fit-content;
+      padding: rem(10) rem(20);
+      position: relative;
+      background-image: linear-gradient(
+        var(--shade, --defaultShadeColor),
+        var(--shade, --defaultShadeColor)
+      );
+      background-size: 70% rem(20);
+      background-repeat: no-repeat;
+      background-position: 0 calc(rem(20) / 5);
+    }
+    > p {
+      color: var(--c-gray-400);
+      font-size: rem(18);
+      line-height: 1.6;
+    }
+  }
+</style>
