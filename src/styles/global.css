@@ -42,6 +42,7 @@
   --t-fg: var(--c-black);
   --t-bg: var(--c-white);
   --t-active: var(--c-blue);
+  --c-green2-rgb: 200, 255, 175;
 
   --h-full: 100vh;
   --w-full: 75rem; /* 1000px; */

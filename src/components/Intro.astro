@@ -18,6 +18,7 @@ import SocialMedia from "./SocialMedia.astro";
     <p class="swup-delay-anim" style="animation-delay: var(--delay400);">
       {splash.frontmatter.description}
     </p>
+
     <div
       class="splash-links swup-delay-anim"
       style="animation-delay: var(--delay500);"
@@ -29,17 +30,17 @@ import SocialMedia from "./SocialMedia.astro";
 
 <style lang="scss">
   @import "../styles/mixin.scss";
+
   .splash-links {
     display: flex;
     flex-direction: column;
-    margin-top: var(--m-tiny);
+    margin-top: var(--m-medium);
     @include bp(768) {
       flex-direction: row;
     }
   }
   .splash-container {
     position: relative;
-    
   }
   .card-splash {
     cursor: default;

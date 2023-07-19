@@ -29,11 +29,53 @@
       </svg>
     </div>
   </a>
-  <a href="mailto:j3re.ch0@gmail.com?subject=Hi">Contact</a>
+  <div class="avail swup-delay-anim" style="animation-delay: var(--delay600);">
+    <a href="mailto:j3re.ch0@gmail.com?subject=Hi">
+      <span class="pulse"></span>Available for freelance
+    </a>
+  </div>
 </nav>
 
 <style lang="scss">
   @import "../styles/mixin.scss";
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(var(--c-green2-rgb), 0);
+    }
+    100% {
+      transform: scale(0.9);
+      box-shadow: 0 0 0 0 rgba(var(--c-green2-rgb), 0);
+    }
+  }
+
+  .avail {
+    a {
+      display: flex;
+      align-items: center;
+      color: var(--c-gray-300);
+      transition: 500ms ease-in-out;
+      &:hover {
+        color: var(--c-green);
+        .pulse {
+          animation: none;
+          transform: scale(0);
+        }
+      }
+    }
+    .pulse {
+      width: rem(12);
+      height: rem(12);
+      border-radius: 50%;
+      background: var(--c-green);
+      margin-right: rem(20);
+      animation: pulse 2s infinite;
+      box-shadow: 0 0 0 0 rgba(var(--c-green2-rgb), 0.7);
+    }
+  }
   .navigation {
     display: flex;
     align-items: center;
