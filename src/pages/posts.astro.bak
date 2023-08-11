@@ -1,0 +1,8 @@
+---
+import PostsContainer from "../components/PostsContainer.astro";
+import PostsLayout from "../layouts/PostsLayout.astro";
+---
+
+<PostsLayout>
+  <PostsContainer />
+</PostsLayout>

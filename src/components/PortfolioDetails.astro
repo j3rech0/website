@@ -65,7 +65,7 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
         <h5>Responsibilities:</h5>
         <ul>
           {
-            responsibilities.map((r, i) => (
+            responsibilities.map((r: string, i: number) => (
               <li
                 class="swup-delay-anim"
                 style={"animation-delay:" + (i += 5) + "00ms"}

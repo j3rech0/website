@@ -1,9 +1,11 @@
 ---
-import TopFold from "./TopFold.astro";
+import PostsItems from "./PostsItems.astro";
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
 ---
 
 <main class="main-container transition-fade" id="swup">
-  <TopFold />
+  <PostsItems posts={posts} />
 </main>
 
 <style lang="scss">
