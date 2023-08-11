@@ -1,13 +1,15 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 const posts = await getCollection("blog");
-type Props = CollectionEntry<"blog">;
+export interface Props {
+  post: CollectionEntry<"blog">;
+}
 
 const { slug } = Astro.params;
-const post = posts.find((page) => page.slug === slug);
-if (!post) return Astro.redirect("/404");
-const { Content } = await post.render();
+const p = posts.find((page) => page.slug === slug);
+if (!p) return Astro.redirect("/404");
+const { Content } = await p.render();
 ---
 
 <div class="project-container">
