@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build & sudo su | ls -la",
+    "build": "astro build & whoami",
     "preview": "astro preview",
     "astro": "astro"
   },
