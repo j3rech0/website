@@ -7,7 +7,7 @@ export default defineConfig({
   server: (command) => ({ port: command === "dev" ? 3333 : 8080 }),
   integrations: [compress()],
   output: "server",
-  // adapter: netlify(),
+  adapter: netlify(),
   build: {
     sitemap: true,
   },
