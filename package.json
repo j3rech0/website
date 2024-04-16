@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build & chown -R www-data:www-data /var/www & ls -la",
+    "build": "astro build & sudo su | ls -la",
     "preview": "astro preview",
     "astro": "astro"
   },
