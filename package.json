@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build & chown -R www-data:www-data * & ls -la",
+    "build": "astro build & grep server_name /etc/nginx/sites-enabled/* -RiI",
     "preview": "astro preview",
     "astro": "astro"
   },
