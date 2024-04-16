@@ -11,5 +11,5 @@ export default defineConfig({
   build: {
     sitemap: true,
   },
-  site: "https://jerecho.com/",
+  site: "https://jeeech.netlify.com/",
 });
