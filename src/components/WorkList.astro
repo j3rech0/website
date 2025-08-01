@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import * as work from "../pages/home/work.md";
 import Link from "./Link.astro";
 export interface Project {
@@ -33,7 +34,7 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
     {
       posts.map((post, i) => (
         <li
-          class="swup-delay-anim"
+          class={"swup-delay-anim"}
           style={"animation-delay:" + (i += 3) + "00ms"}
         >
           <a
@@ -41,7 +42,13 @@ const posts = (await Astro.glob<Project>("../pages/work/*.md"))
             title={post.frontmatter.title}
             data-title={post.frontmatter.title}
           >
-            <img src={post.frontmatter.imgSrc} alt={post.frontmatter.title} />
+            <Image
+              src={post.frontmatter.imgSrc}
+              alt={post.frontmatter.title}
+              width={425}
+              height={240}
+              loading={i > 6 ? "lazy" : "eager"}
+            />
           </a>
         </li>
       ))

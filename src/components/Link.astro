@@ -16,6 +16,14 @@ const { text, className, url, title, hasIcon } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
+    &-row-reverse {
+      justify-content: flex-end;
+      flex-direction: row-reverse;
+    }
+  }
+
+  .cta.mt-0 {
+    margin-top: 0;
   }
 
   .cta {

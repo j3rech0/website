@@ -1,7 +1,7 @@
 $browser-context: 16;
 
-@function rem($pixels, $context: $browser-context) {
-    @return #{calc($pixels/$context)}rem;
+@function rem($pixels) {
+  @return #{calc($pixels/$browser-context)}rem;
 }
 
 @mixin bp($bp, $min-max: min-width) {
