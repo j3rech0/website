@@ -4,7 +4,6 @@ import PostsDetails from "../../components/PostsDetails.astro";
 import PostsLayout from "../../layouts/PostsLayout.astro";
 import slugify from "../../utils/slugify";
 
-export const prerender = true;
 
 export interface Props {
   post: CollectionEntry<"blog">;
