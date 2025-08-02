@@ -5,7 +5,9 @@ import netlify from "@astrojs/netlify/edge-functions";
 export default defineConfig({
   server: (command) => ({ port: command === "dev" ? 3333 : 8080 }),
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({
+    edgeMiddleware: true,
+  }),
   build: {
     sitemap: true,
   },
