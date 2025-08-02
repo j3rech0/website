@@ -1,4 +1,5 @@
 ---
+import Image from "astro/components/Image.astro";
 import Link from "./Link.astro";
 const icon = `<svg
               width="44"
@@ -36,7 +37,8 @@ const { responsibilities, title, imgSrcfull, link, description, builtwith } =
       style="animation-delay: var(--delay100)"
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <img src={imgSrcfull} alt="" width="493" />
+        <!-- <img src={imgSrcfull} alt="" width="493" /> -->
+        <Image src={imgSrcfull} alt="" width="493" />
       </a>
     </div>
     <div
